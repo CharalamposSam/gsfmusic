@@ -1,0 +1,39 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^spotify/([a-zA-Z0-9]+) spotify.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^youtube/([a-zA-Z0-9]+) youtube.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^apple/([a-zA-Z0-9]+) apple.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-dS
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^amazon/([a-zA-Z0-9]+) amazon.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^deezer/([a-zA-Z0-9]+) deezer.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^tidal/([a-zA-Z0-9]+) tidal.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^soundcloud/([a-zA-Z0-9]+) soundcloud.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^cd/([a-zA-Z0-9]+) cd.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^giveaway giveaway.php [NC,L] 
+
+RewriteRule ^([a-zA-Z0-9-]+)$ index.php?s=$1 [NC,L] 
