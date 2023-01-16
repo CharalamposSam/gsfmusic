@@ -14,6 +14,9 @@
     <a target="_blank" href="https://www.youtube.com/channel/UCUTJlf84CFiq-eUU0M6Vf3A?sub_confirmation=1%C2%A8" title="YouTube" class="iconHover">
         <img src="icons/youtube-icon.png" alt="youtube">
     </a>
+    <a target="_blank" href="https://www.tiktok.com/@gsfmusic" title="TikTOk" class="iconHover">
+        <img src="icons/tiktok-icon.png" alt="tiktok">
+    </a>
     <a href="" title="Email" class="emailMenuIcon">
         <img src="icons/email.png" alt="email">
         <span class="emailTag">csamouridis@gsfmusic.gr</span>
