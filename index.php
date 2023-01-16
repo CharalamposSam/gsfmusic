@@ -141,6 +141,13 @@ if ( isset( $_GET[ 's' ] ) ) {
                                     <img src="icons/facebook.png" alt="facebook">
                             </a>
                             <?php } ?>
+
+                            <?php if ( $row[ 'artist_spotify' ] != '' ) { ?>
+                            <a target="_blank" title="Spotify"
+                             href="<?php echo $row[ 'artist_spotify' ]; ?>">
+                                    <img src="icons/spotify.png" alt="spotify">
+                            </a>
+                            <?php } ?>
                             
                             <?php if ( $row[ 'artist_instagram' ] != '' ) { ?>
                             <a target="_blank" title="Instagram"
