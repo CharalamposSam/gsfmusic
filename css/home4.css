@@ -616,7 +616,9 @@ footer .loader .loader3 {
   main header a {
     margin: auto 5px;
   }
-  
+  main header a img {
+    width: 40px;
+  }
   main header .logo img {
     width: 50px;
   }
