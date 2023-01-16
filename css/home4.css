@@ -616,11 +616,9 @@ footer .loader .loader3 {
   main header a {
     margin: auto 5px;
   }
-  main header a img {
-    width: 36px;
-  }
+  
   main header .logo img {
-    width: 45px;
+    width: 50px;
   }
   main header .emailMenuIcon .emailTag {
     left: -172px;
