@@ -73,7 +73,7 @@ if ( isset( $_GET[ 's' ] ) ) {
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-                <link rel="stylesheet" href="css/artist3.css">
+                <link rel="stylesheet" href="css/artist.css">
                 <!-- Global site tag (gtag.js) - Google Analytics -->
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW2WQCM7C0"></script>
                 <script>
