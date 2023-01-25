@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/playlist?list=PLglOs-zK7DJA_HMTnh-h_s2tXBQreXLN1" alt="Το λαϊκο τραγούδι της Κύπρου">
+                <a target="_blank" href="https://www.youtube.com/watch?v=-sL-9Ck1DCY&ab_channel=GSFMusicOfficial" alt="Ένα τσιγάρο δρόμος">
                     <img src="images/featured/homeHero.jpg" alt="hero">
                 </a>
             </div>
@@ -76,8 +76,8 @@
         <div class="sliderCont">
             <div class="slider">
                 <div class="featured">
-                    
-                    <div>
+
+                <div>
                         <div>
                             <img src="images/featured/featured.jpg" alt="Δανιέλα Χατζή">
                         </div>
@@ -85,19 +85,22 @@
                     </div>
                     
                     
+                <div>
+                        <div>
+                            <img src="images/featured/featured2.jpg" alt="Το λαϊκο τραγούδι της Κύπρου">
+                        </div>
+                        <a target="_blank" href="https://youtu.be/kPrY5JbxNQc">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                    </div>
+
+
                     <div>
                         <div >
-                            <img src="images/featured/featured1.jpg" alt="Γιώργος Χατζής - Γιώργος Κωτσίνης">
+                            <img src="images/featured/featured3.jpg" alt="Γιώργος Χατζής - Γιώργος Κωτσίνης">
                         </div>
                         <a target="_blank" href="https://youtu.be/hB56qkHsIfQ">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
-                    <div>
-                        <div>
-                            <img src="images/featured/featured2.jpg" alt="Κώτσας Σμοκοβίτης">
-                        </div>
-                        <a target="_blank" href="https://youtu.be/kPrY5JbxNQc">Περισσότερα <img src="icons/open.png" alt="open"></a>
-                    </div>
+                    
                     
                     
                 </div>
