@@ -87,9 +87,9 @@
                     
                 <div>
                         <div>
-                            <img src="images/featured/feature2.jpg.jpg" alt="Το λαϊκο τραγούδι της Κύπρου">
+                            <img src="images/featured/feature2.jpg" alt="Το λαϊκο τραγούδι της Κύπρου">
                         </div>
-                        <a target="_blank" href="https://youtu.be/kPrY5JbxNQc">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=gNJ4ta-X2Jg&list=PLglOs-zK7DJA_HMTnh-h_s2tXBQreXLN1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
 
