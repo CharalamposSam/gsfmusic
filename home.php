@@ -87,7 +87,7 @@
                     
                 <div>
                         <div>
-                            <img src="images/featured/featured2.jpg" alt="Το λαϊκο τραγούδι της Κύπρου">
+                            <img src="images/featured/feature2.jpg.jpg" alt="Το λαϊκο τραγούδι της Κύπρου">
                         </div>
                         <a target="_blank" href="https://youtu.be/kPrY5JbxNQc">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
