@@ -45,6 +45,9 @@ if ( isset( $_GET[ 's' ] ) ) {
             <html lang="en">
 
             <head>
+            <meta http-equiv="Expires" content="Tue, 10 Jan 2023 12:12:12 GMT">
+            <meta http-equiv="Pragma" content="no-cache">
+
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <?php while ( $row = mysqli_fetch_assoc( $result ) ) { ?>
