@@ -113,9 +113,32 @@
                 <img src="icons/Partners2.png" alt="Partners">
             </div>
         </div>
+<!-- 
+        <div class="artistsDetails topArtists">
+        </div> -->
+        <div class="topArtists">
+            <?php
+                require_once('conn.php');
+                $sql = "SELECT artist_codename, artist_name, count(connector.connect_codename) as total, sum(main.num_of_tracks) as summary_tracks, sum(main.duration) as summary_duration FROM artists LEFT JOIN connector ON artists.artist_codename = connector.connect_codename INNER JOIN main ON connector.album_code = main.code WHERE artists.artist_codename = 'kapsalis' OR artists.artist_codename = 'tzoukopoulos' OR artists.artist_codename = 'serbezis' OR artists.artist_codename = 'serbezis' OR artists.artist_codename = 'thodi' OR artists.artist_codename = 'papakostas' OR artists.artist_codename = 'tzoukopoulos' OR artists.artist_codename = 'pailas' GROUP BY artist_codename ORDER BY artist_name";              
+                $result = mysqli_query( $conn, $sql );
 
+                while ( $row = mysqli_fetch_assoc( $result ) ) { ?>
+                <a href="https://www.gsfmusic.gr/<?php echo $row['artist_codename']; ?>">
+                    <div class="artist" style="background: #b59a02">
 
-        <div class="artistsDetails">
+                        <div class="image">
+                            <img src="images/artists/<?php echo $row['artist_codename']; ?>.jpg" alt="Artist">
+                        </div>
+                        <div class="name"><?php echo $row['artist_name']; ?></div>
+                        <div class="generalDetails">
+                        <?php echo $row['total']; ?> albums / <?php echo $row['summary_tracks']; ?> tracks / <?php echo $row['summary_duration']; ?>
+                        </div>
+                    </div>   
+                </a>
+            <?php } ?>
+        </div>
+
+        <div class="artistsDetails" style ="margin-top: 70px">
 
             <?php
                 require_once('conn.php');
@@ -240,7 +263,7 @@
                                                 <div class="generalDetails">
                                                     ${artist.total} albums / ${artist.summary_tracks} tracks / ${setDuration}
                                                 </div>
-                                            </div> `
+                                            </div>`
 
                         a.innerHTML = theAlbum
                         artists.appendChild(a)
