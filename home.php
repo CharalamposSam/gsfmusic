@@ -113,9 +113,8 @@
                 <img src="icons/Partners2.png" alt="Partners">
             </div>
         </div>
-<!-- 
-        <div class="artistsDetails topArtists">
-        </div> -->
+
+        <!-- Top Artistss -->
         <div class="topArtists">
             <?php
                 require_once('conn.php');
