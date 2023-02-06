@@ -1,7 +1,7 @@
 <?php
 if ( isset( $_POST[ 'loginSubmit' ]) ) {
 
-    require_once( 'conn.php' );
+    require_once( '../conn.php' );
 
     $username = $_POST[ 'username' ];
     $password = $_POST[ 'password' ];
