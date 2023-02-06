@@ -22,7 +22,7 @@ if ( isset( $_POST[ 'loginSubmit' ]) ) {
             session_start();
             $_SESSION['userId'] = $id;
             $_SESSION['userUsername'] = $username;
-            header("Location: add.php?private&admin");
+            header("Location: index.php?private&admin");
             exit();
         } else {
             header( "Location: login.php?private&admin&error" );
