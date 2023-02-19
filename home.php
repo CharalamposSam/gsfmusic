@@ -123,7 +123,7 @@
 
                 while ( $row = mysqli_fetch_assoc( $result ) ) { ?>
                 <a href="https://www.gsfmusic.gr/<?php echo $row['artist_codename']; ?>">
-                    <div class="artist" style="background: #b59a02">
+                    <div class="artist" style="background: #b59a02" onMouseOver="this.style.background='#BEA203'" onMouseOut="this.style.background='#b59a02'">
 
                         <div class="image">
                             <img src="images/artists/<?php echo $row['artist_codename']; ?>.jpg" alt="Artist">
