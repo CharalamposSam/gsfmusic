@@ -16,8 +16,12 @@ if ( isset( $_GET[ 's' ] ) ) {
         header( "Location: https://www.facebook.com/gsfmusicofficial" );
     } else if ( $s == 'ig' ) {
         header( "Location: https://www.instagram.com/gsfmusicofficial/" );
+    } else if ( $s == 'eshoppp' ) {
+        header( "Location: eshoppp/" );
     } else if ( $s == 'eshop' ) {
         header( "Location: https://gsfrecords.com" );
+    } else if ($s == 'eshoppp') {
+        header( "Location: http://localhost/Projects/gsfmusic/eshoppp.php" );
     } else if ( $s == 'instagram' ) {
         header( "Location: https://www.instagram.com/gsfmusicofficial/" );
     } else if ( $s == 'youtube' ) {
