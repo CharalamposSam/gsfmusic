@@ -26,6 +26,10 @@ RewriteRule ^tidal/([a-zA-Z0-9]+) tidal.php?c=$1 [NC,L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^tiktok/([a-zA-Z0-9]+) tiktok.php?c=$1 [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^soundcloud/([a-zA-Z0-9]+) soundcloud.php?c=$1 [NC,L] 
 
 RewriteCond %{REQUEST_FILENAME} !-d
