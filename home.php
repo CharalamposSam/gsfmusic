@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=-sL-9Ck1DCY&ab_channel=GSFMusicOfficial" alt="Ένα τσιγάρο δρόμος">
+                <a target="_blank" href="https://www.youtube.com/watch?v=5XDQExmmfIA&ab_channel=GSFMusicOfficial" alt="Σαν την πικροδάφνη">
                     <img src="images/featured/homeHero.jpg" alt="hero">
                 </a>
             </div>
@@ -79,9 +79,9 @@
 
                 <div>
                         <div>
-                            <img src="images/featured/featured.jpg" alt="Δανιέλα Χατζή">
+                            <img src="images/featured/feature.jpg" alt="Ένα τσιγάρο δρόμος">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=2SU3r2Xqo54&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=-sL-9Ck1DCY&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
                     
@@ -95,9 +95,9 @@
 
                     <div>
                         <div >
-                            <img src="images/featured/featured3.jpg" alt="Γιώργος Χατζής - Γιώργος Κωτσίνης">
+                            <img src="images/featured/featured3.jpg" alt="Δανιέλα Χατζή">
                         </div>
-                        <a target="_blank" href="https://youtu.be/hB56qkHsIfQ">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=2SU3r2Xqo54&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
                     
