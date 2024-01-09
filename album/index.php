@@ -140,12 +140,12 @@
 <?php 
         }
       } else {
-        header( "Location: ../home.php" );
+        header( "Location: ../" );
       }
     } else {
-      header( "Location: ../home.php" );
+      header( "Location: ../" );
     }
   } else {
-    header( "Location: ../home.php" );
+    header( "Location: ../" );
   }
 ?>
