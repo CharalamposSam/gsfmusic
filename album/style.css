@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #2b2121;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: "Montserrat", Arial, sans-serif;
+  overflow: auto;
+}
+body main {
+  width: 100%;
+  max-width: 1100px;
+  color: white;
+}
+body main .searchContainer {
+  width: 100%;
+  margin: 10px 0;
+}
+body main .searchContainer .searchBar {
+  display: flex;
+  justify-content: center;
+}
+body main .searchContainer .searchBar input {
+  width: 80%;
+  height: 35px;
+  font-size: 16px;
+  color: black;
+  border-radius: 12px;
+  padding-left: 12px;
+  text-align: center;
+}
+body main .searchContainer .categories {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body main .searchContainer .categories .category {
+  padding: 3px 8px;
+  margin: 5px 0;
+  background-color: white;
+  color: black;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+body main .searchContainer .categories .margin:not(:first-of-type) {
+  margin-left: 25px;
+}
+body main .searchContainer .categories .category:hover {
+  background-color: #dddddd;
+}
+body main .albums {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body main .albums .album {
+  width: 340px;
+  background: #8f0d0d;
+  padding: 20px;
+  border-radius: 7px;
+  position: relative;
+}
+body main .albums .album .cover {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 7px;
+}
+body main .albums .album .tags {
+  width: 300px;
+  margin-top: 10px;
+  min-height: 18px;
+}
+body main .albums .album .tags .tag {
+  padding: 3px 4px;
+  background-color: white;
+  color: black;
+  font-size: 11px;
+  margin-right: 10px;
+  border-radius: 7px;
+  font-weight: 500;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .albums .album .title {
+  font-size: 20px;
+  padding: 0 10px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body main .albums .album .artists {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+body main .albums .album .tracksDuration {
+  text-align: center;
+  margin: 40px 0;
+}
+body main .albums .album .prize {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+body main .albums .album .prize button {
+  width: 180px;
+  height: 40px;
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: rgba(42, 42, 42, 0.9);
+  color: white;
+}
+body main .albums .album .prize button span {
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: 900;
+}
+body main .albums .album .prize .buttonDisabled {
+  background-color: rgba(42, 42, 42, 0.5);
+  color: #ccc;
+  pointer-events: none;
+}
+body main .albums .album .prize button:hover {
+  background-color: rgba(23, 23, 23, 0.9);
+}
+body main .albums .album .prize .unavailable {
+  background: #ccc;
+  color: #ababab;
+  cursor: not-allowed;
+}
+body main .albums .album .prize .unavailable:hover {
+  background: #ccc;
+}
+body main .albums .players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 340px;
+  height: 100%;
+  background: #8f0d0d;
+  border-radius: 7px;
+}
+body main .albums .players .player {
+  border-radius: 7px;
+  overflow: hidden;
+  width: 100%;
+  height: 168px;
+  position: relative;
+  margin: 0 auto;
+  background: #6f0c0c;
+}
+body main .albums .players .player .triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid black;
+  opacity: 0.6;
+}
+body main .albums .players .player iframe {
+  display: block;
+  z-index: 2;
+  position: relative;
+  border-radius: 7px;
+}
+body main .albums .players .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+body main .albums .players .buttons a {
+  cursor: auto;
+  color: white;
+  text-decoration: none;
+}
+body main .albums .players .buttons a button {
+  margin: 5px;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+body main .albums .players .buttons a button img {
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+body main .albums .players .buttons a button:hover {
+  transform: scale(1.05);
+}
+body main .albums .players .buttons a .cdBtn {
+  padding: 5px;
+  background-color: white;
+}
+body main .albums .players .buttons a .spotifyBtn,
+body main .albums .players .buttons a .youtubeBtn {
+  background-color: #000000;
+  padding: 5px;
+}
+body main .albums .players .buttons a .appleBtn {
+  background: rgb(254, 36, 85);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(254, 36, 85)), color-stop(100%, rgb(231, 56, 39)));
+  background: linear-gradient(to bottom, rgb(254, 36, 85) 0%, rgb(231, 56, 39) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fe2455", endColorstr="#e73827", GradientType=0 );
+}
+body main .albums .players .buttons a .amazonBtn {
+  background: rgb(68, 0, 255);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(68, 0, 255)), color-stop(100%, rgb(44, 33, 110)));
+  background: linear-gradient(to bottom, rgb(68, 0, 255) 0%, rgb(44, 33, 110) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4400ff", endColorstr="#2c216e", GradientType=0 );
+}
+body main .albums .players .buttons a .deezerBtn {
+  background-color: #000000;
+}
+body main .albums .players .buttons a .tidalBtn {
+  background-color: #000000;
+}
+body main .albums .players .buttons a .soundcloudBtn {
+  background: rgb(255, 42, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(255, 42, 0)), color-stop(100%, rgb(231, 56, 39)));
+  background: linear-gradient(to bottom, rgb(255, 42, 0) 0%, rgb(231, 56, 39) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff2a00", endColorstr="#e73827", GradientType=0 );
+}
+body main .albums .players .otherPlatforms {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  justify-content: center;
+  font-size: 16px;
+}
+body main .albums .players .otherPlatforms div {
+  margin: 8px;
+}
+body main .albums .players .otherPlatforms div span {
+  color: #10be10;
+  margin-right: 8px;
+  font-weight: 900;
+}
+body main .albums .players .artistProfile {
+  margin-top: 42px;
+}
+body main .albums .players .artistProfile button {
+  width: 180px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f6f6f6;
+  font-weight: 700;
+}
+body main .albums .players .artistProfile button:hover {
+  background: #f1f1f1;
+}
+body main .description {
+  width: 80%;
+  min-height: 300px;
+  background-color: #484747;
+  margin: 0 auto 50px;
+  border-radius: 5px;
+  padding: 20px 60px;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 950px) {
+  body main .description {
+    max-width: 720px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body main .albums {
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 20px;
+  }
+  body main .description {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

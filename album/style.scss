@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #2b2121;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Montserrat', Arial, sans-serif;
+  overflow: auto;
+
+  main {
+    width: 100%;
+    max-width: 1100px;
+    color: white;
+
+    .searchContainer {
+      width: 100%;
+      margin: 10px 0;
+
+      .searchBar {
+        display: flex;
+        justify-content: center;
+
+        input {
+          width: 80%;
+          height: 35px;
+          font-size: 16px;
+          color: black;
+          border-radius: 12px;
+          padding-left: 12px;
+          text-align: center;
+        }
+      }
+
+      .categories {
+        margin-top: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .category {
+          padding: 3px 8px;
+          margin: 5px 0;
+          background-color: white;
+          color: black;
+          border-radius: 7px;
+          font-size: 16px;
+          font-weight: bold;
+          width: fit-content;
+          cursor: pointer;
+        }
+
+        .margin:not(:first-of-type) {
+          margin-left: 25px;
+        }
+
+        .category:hover {
+          background-color: #dddddd;
+        }
+      }
+    }
+
+    .albums {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .album {
+        width: 340px;
+        background: #8f0d0d;
+        padding: 20px;
+        border-radius: 7px;
+        position: relative;
+
+        .cover {
+          max-width: 300px;
+          max-height: 300px;
+          border-radius: 7px;
+        }
+
+        .tags {
+          width: 300px;
+          margin-top: 10px;
+          min-height: 18px;
+
+          .tag {
+            padding: 3px 4px;
+            background-color: white;
+            color: black;
+            font-size: 11px;
+            margin-right: 10px;
+            border-radius: 7px;
+            font-weight: 500;
+            width: fit-content;
+          }
+        }
+
+        .title {
+          font-size: 20px;
+          padding: 0 10px;
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .artists {
+          font-size: 14px;
+          font-weight: 400;
+          margin: 10px 0;
+        }
+
+        .tracksDuration {
+          text-align: center;
+          margin: 40px 0;
+        }
+
+        .prize {
+          text-align: center;
+          margin: 30px 0 20px;
+
+          button {
+            width: 180px;
+            height: 40px;
+            border-radius: 7px;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: rgba(42, 42, 42, 0.9);
+            color: white;
+
+            span {
+              font-size: 12px;
+              margin-left: 10px;
+              font-weight: 900;
+            }
+          }
+
+          .buttonDisabled {
+            background-color: rgba(42, 42, 42, 0.5);
+            color: #ccc;
+            pointer-events: none;
+          }
+
+          button:hover {
+            background-color: rgba(23, 23, 23, 0.9);
+          }
+
+          .unavailable {
+            background: #ccc;
+            color: #ababab;
+            cursor: not-allowed;
+          }
+
+          .unavailable:hover {
+            background: #ccc;
+          }
+        }
+      }
+
+      .players {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        width: 340px;
+        height: 100%;
+        background: #8f0d0d;
+        border-radius: 7px;
+
+        .player {
+          border-radius: 7px;
+          overflow: hidden;
+          width: 100%;
+          height: 168px;
+          position: relative;
+          margin: 0 auto;
+          background: #6f0c0c;
+
+          .triangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 50px solid black;
+            opacity: 0.6;
+          }
+
+          iframe {
+            display: block;
+            z-index: 2;
+            position: relative;
+            border-radius: 7px;
+          }
+        }
+
+        .buttons {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin: 40px 0;
+
+          a {
+            cursor: auto;
+            color: white;
+            text-decoration: none;
+
+            button {
+              margin: 5px;
+              width: 55px;
+              height: 55px;
+              display: grid;
+              place-items: center;
+              border-radius: 7px;
+              overflow: hidden;
+              border: none;
+              padding: 0;
+              cursor: pointer;
+              outline: none;
+
+              img {
+                display: block;
+                width: 100%;
+                pointer-events: none;
+              }
+            }
+
+            button:hover {
+              transform: scale(1.05);
+            }
+
+            .cdBtn {
+              padding: 5px;
+              background-color: white;
+            }
+
+            .spotifyBtn,
+            .youtubeBtn {
+              background-color: #000000;
+              padding: 5px;
+            }
+
+            .appleBtn {
+              background: rgba(254, 36, 85, 1);
+              background: -moz-linear-gradient(top, rgba(254, 36, 85, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254, 36, 85, 1)), color-stop(100%, rgba(231, 56, 39, 1)));
+              background: -webkit-linear-gradient(top, rgba(254, 36, 85, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -o-linear-gradient(top, rgba(254, 36, 85, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -ms-linear-gradient(top, rgba(254, 36, 85, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: linear-gradient(to bottom, rgba(254, 36, 85, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe2455', endColorstr='#e73827', GradientType=0 );
+            }
+
+            .amazonBtn {
+              background: rgba(68, 0, 255, 1);
+              background: -moz-linear-gradient(top, rgba(68, 0, 255, 1) 0%, rgba(44, 33, 110, 1) 100%);
+              background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68, 0, 255, 1)), color-stop(100%, rgba(44, 33, 110, 1)));
+              background: -webkit-linear-gradient(top, rgba(68, 0, 255, 1) 0%, rgba(44, 33, 110, 1) 100%);
+              background: -o-linear-gradient(top, rgba(68, 0, 255, 1) 0%, rgba(44, 33, 110, 1) 100%);
+              background: -ms-linear-gradient(top, rgba(68, 0, 255, 1) 0%, rgba(44, 33, 110, 1) 100%);
+              background: linear-gradient(to bottom, rgba(68, 0, 255, 1) 0%, rgba(44, 33, 110, 1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4400ff', endColorstr='#2c216e', GradientType=0 );
+            }
+
+            .deezerBtn {
+              background-color: #000000;
+            }
+
+            .tidalBtn {
+              background-color: #000000;
+            }
+
+            .soundcloudBtn {
+              background: rgba(255, 42, 0, 1);
+              background: -moz-linear-gradient(top, rgba(255, 42, 0, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 42, 0, 1)), color-stop(100%, rgba(231, 56, 39, 1)));
+              background: -webkit-linear-gradient(top, rgba(255, 42, 0, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -o-linear-gradient(top, rgba(255, 42, 0, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: -ms-linear-gradient(top, rgba(255, 42, 0, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              background: linear-gradient(to bottom, rgba(255, 42, 0, 1) 0%, rgba(231, 56, 39, 1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#e73827', GradientType=0 );
+            }
+          }
+        }
+
+        .otherPlatforms {
+          display: grid;
+          grid-template: 1fr 1fr / 1fr 1fr;
+          justify-content: center;
+          font-size: 16px;
+
+          div {
+            margin: 8px;
+
+            span {
+              color: #10be10;
+              margin-right: 8px;
+              font-weight: 900;
+            }
+          }
+        }
+
+        .artistProfile {
+          margin-top: 42px;
+
+          button {
+            width: 180px;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: #f6f6f6;
+            font-weight: 700;
+          }
+
+          button:hover {
+            background: #f1f1f1;
+          }
+        }
+      }
+    }
+
+    .description {
+      width: 80%;
+      min-height: 300px;
+      background-color: #484747;
+      margin: 0 auto 50px;
+      border-radius: 5px;
+      padding: 20px 60px;
+      border: 1px solid white;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  body main .description {
+    max-width: 720px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body main .albums {
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  body main .description {
+    width: 90%;
+  }
+}

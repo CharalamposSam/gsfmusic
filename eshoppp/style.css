@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Montserrat", Arial, sans-serif;
+  overflow: auto;
 }
 body main {
   width: 100%;
@@ -19,14 +20,31 @@ body main {
 }
 body main .searchContainer {
   width: 100%;
-  margin: 50px 0;
+  margin: 10px 0;
+}
+body main .searchContainer .searchBar {
+  display: flex;
+  justify-content: center;
+}
+body main .searchContainer .searchBar input {
+  width: 80%;
+  height: 35px;
+  font-size: 16px;
+  color: black;
+  border-radius: 12px;
+  padding-left: 12px;
+  text-align: center;
 }
 body main .searchContainer .categories {
+  margin-top: 25px;
   width: 100%;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 body main .searchContainer .categories .category {
-  padding: 3px 4px;
+  padding: 3px 8px;
+  margin: 5px 0;
   background-color: white;
   color: black;
   border-radius: 7px;
@@ -37,23 +55,10 @@ body main .searchContainer .categories .category {
   cursor: pointer;
 }
 body main .searchContainer .categories .margin:not(:first-of-type) {
-  margin-left: 7px;
+  margin-left: 25px;
 }
 body main .searchContainer .categories .category:hover {
   background-color: #dddddd;
-}
-body main .searchContainer .searchBar {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-}
-body main .searchContainer .searchBar input {
-  width: 100%;
-  height: 35px;
-  font-size: 16px;
-  color: black;
-  border-radius: 12px;
-  padding-left: 12px;
 }
 body main .albums {
   max-width: 1100px;
@@ -68,6 +73,7 @@ body main .albums .album {
   background: #8f0d0d;
   padding: 20px;
   border-radius: 7px;
+  position: relative;
 }
 body main .albums .album .cover {
   max-width: 300px;
@@ -85,7 +91,7 @@ body main .albums .album .artists {
   font-weight: 400;
   margin: 10px 0;
 }
-body main .albums .album .tracksDuration {
+body main .albums .album .prize {
   text-align: center;
   margin: 30px 0;
 }
@@ -114,6 +120,68 @@ body main .albums .album .buttons .details img {
 }
 body main .albums .album .buttons .addToCart img {
   width: 90%;
+}
+body main .albums .detailsCont {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  height: 415px;
+  background-color: #8f0d0d;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.75);
+  transform-origin: bottom;
+  scale: 1 0;
+  padding: 20px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Handle */
+  /* Handle on hover */
+}
+body main .albums .detailsCont div {
+  opacity: 0;
+  transition: opacity 0.2s;
+  max-height: 320px;
+  overflow: auto;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to top, #8f0d0d, #8f0d0d), linear-gradient(to top, #8f0d0d, #8f0d0d), linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: bottom center, top center, bottom center, top center;
+  background-color: #8f0d0d;
+  background-repeat: no-repeat;
+  background-size: 100% 20px, 100% 20px, 100% 10px, 100% 10px;
+  background-attachment: local, local, scroll, scroll;
+}
+body main .albums .detailsCont div p {
+  margin: 6px 0;
+}
+body main .albums .detailsCont ::-webkit-scrollbar-thumb {
+  background: #810e0e;
+}
+body main .albums .detailsCont ::-webkit-scrollbar-thumb:hover {
+  background: #6d0c0c;
+}
+body main .albums .detailsCont a {
+  width: 150px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body main .albums .detailsCont a img {
+  width: 20px;
+  filter: invert(1);
+  transform: translateY(-2px);
+}
+body main .albums .enableDetails {
+  scale: 1 1;
 }
 
 @media only screen and (max-width: 1200px) {
