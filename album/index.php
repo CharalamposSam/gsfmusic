@@ -89,7 +89,7 @@
             </div>
           <?php ?>
         </div>
-        <div class="players">
+        <!-- <div class="players">
           <div class="player">
             <div class="triangle"></div>
             <iframe
@@ -121,17 +121,17 @@
             <?php if ($row[ 'tidal' ] != null) { ?>
             <a target="_blank" href="<?php echo $row[ 'tidal' ]; ?>"><button class="tidalBtn" title="Tidal"><img src="../icons/tidal.png" alt="tidal"></button></a>
             <?php } ?>
-          </div>
+          </div> 
 
           <div class="otherPlatforms">
             <div class="platform"><span>&#10003;</span>TikTok</div>
             <div class="platform"><span>&#10003;</span>Instagram</div>
             <div class="platform"><span>&#10003;</span>Facebook</div>
             <div class="platform"><span>&#10003;</span>iTunes</div>
-          </div>
+          </div>-->
           <!-- <a href="" class="artistProfile"><button>Artist Profile</button></a href=""> -->
-        </div>
-      </div>
+        <!--</div> -->
+      </div> 
       <div class="description"><?php echo $row[ 'description' ]; ?></div>
         </main>
     </body>
