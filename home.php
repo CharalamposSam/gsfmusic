@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=5XDQExmmfIA&ab_channel=GSFMusicOfficial" alt="Σαν την πικροδάφνη">
+                <a target="_blank" href="https://www.youtube.com/playlist?list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
                     <img src="images/featured/homeHero.jpg" alt="hero">
                 </a>
             </div>
@@ -79,9 +79,9 @@
 
                 <div>
                         <div>
-                            <img src="images/featured/feature.jpg" alt="Ένα τσιγάρο δρόμος">
+                            <img src="images/featured/feature.jpg" alt="Ο Χαμαμζτής">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=-sL-9Ck1DCY&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=xvSl6ZzdOIQ&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
                     
