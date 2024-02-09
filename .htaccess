@@ -40,8 +40,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^giveaway giveaway.php [NC,L] 
 
-# Redirect for clean album URLs
-RewriteCond %{QUERY_STRING} ^a=([0-9]+)$
-RewriteRule ^album/$ /album/%1? [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^album/([0-9]+) index.php?a=$1 [NC,L] 
 
 RewriteRule ^([a-zA-Z0-9-]+)$ index.php?s=$1 [NC,L] 
