@@ -2,7 +2,7 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^album/([0-9]+) /album/index.php?a=%1 [NC,L] 
+RewriteRule ^album/index.php/([0-9]+) album/index.php?a=$1 [NC,L] 
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
