@@ -1,9 +1,5 @@
 RewriteEngine On
 
-# Redirect for clean album URLs
-RewriteCond %{QUERY_STRING} ^a=([0-9]+)$
-RewriteRule ^album/$ /album/%1? [R=301,L]
-
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^spotify/([a-zA-Z0-9]+) spotify.php?c=$1 [NC,L] 
@@ -43,5 +39,9 @@ RewriteRule ^cd/([a-zA-Z0-9]+) cd.php?c=$1 [NC,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^giveaway giveaway.php [NC,L] 
+
+# Redirect for clean album URLs
+RewriteCond %{QUERY_STRING} ^a=([0-9]+)$
+RewriteRule ^album/$ /album/%1? [R=301,L]
 
 RewriteRule ^([a-zA-Z0-9-]+)$ index.php?s=$1 [NC,L] 
