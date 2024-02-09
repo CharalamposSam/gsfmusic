@@ -1,7 +1,8 @@
 RewriteEngine On
 
-RewriteCond %{QUERY_STRING} ^a=([0-9]+)$
-RewriteRule ^album/$ /album/index.php?a=%1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^album/([0-9]+) /album/index.php?a=%1 [NC,L] 
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
