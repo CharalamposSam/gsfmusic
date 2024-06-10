@@ -1,8 +1,22 @@
+// Redirect in case no product exists in the cart
+// if (!localStorage.getItem('cart')) {
+//   window.location.assign('../home.php')
+// }
+
 const sumQuantity = document.querySelector('main .container .cart .sum .sumQuantity span')
 const sumAmount = document.querySelector('main .container .cart .sum .sumAmount span')
 const decrement = document.querySelectorAll('main .container .cart .product .quantity .decrement')
 const increment = document.querySelectorAll('main .container .cart .product .quantity .increment')
 const deleteProduct = document.querySelectorAll('main .container .cart .product .delete img')
+
+let myCart = JSON.parse(localStorage.getItem('cart'))
+
+// Update sum quantity on page load
+sumQuantity.textContent = myCart.length
+
+// Update sum amount on page load
+
+console.log(myCart.length)
 
 decrement.forEach(d => {
   d.addEventListener('click', function () {

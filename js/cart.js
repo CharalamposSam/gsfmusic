@@ -5,7 +5,8 @@ const cartItems = document.querySelector('main .cart .item')
 
 function addTocart(productCode) {
   if (!localStorage.getItem('cart')) {
-    const cart = [{ product: productCode, quantity: 1 }]
+    const cart = [{ product: productCode, cost: 1 }]
+    console.log(this)
     cartQuantity.textContent = 1
 
     localStorage.setItem('cart', JSON.stringify(cart))
@@ -52,7 +53,6 @@ function checkIfAlbumExistsInCart() {
   if (!localStorage.getItem('cart')) {
     buyButton.classList.remove('buttonDisabled')
     cart.style.height = 0
-    console.log('object')
   } else {
     const url = window.location.href
     const match = /\ba=([^&]*)/.exec(url)

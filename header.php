@@ -1,6 +1,8 @@
 <?php 
 if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false) {
     $basePath = "../";
+} else if (strpos($_SERVER['REQUEST_URI'], '/checkout/') !== false) {
+    $basePath = "../";
 } else {
     $basePath = '';
 }
@@ -34,12 +36,16 @@ if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false) {
     </a>
 </header>
 
-<link rel="stylesheet" href="<?php echo $basePath; ?>css/cart.css" />
+<!-- Load cart in all pages beside Checkout page -->
+<?php if (strpos($_SERVER['REQUEST_URI'], '/checkout/') === false) { ?>
+    <link rel="stylesheet" href="<?php echo $basePath; ?>css/cart.css" />
 
-<div class="cart">
-    <a href="">
-    <span class="quantity">0</span>&nbsp;<span class="item">προϊόν</span>&nbsp;στο καλάθι&nbsp;&nbsp;&nbsp;&nbsp;<span class="ckeckout">Ταμείο &#8594;</span>
-    </a>
-</div>
+    <div class="cart">
+        <a href="../checkout">
+        <span class="quantity">0</span>&nbsp;<span class="item">προϊόν</span>&nbsp;στο καλάθι&nbsp;&nbsp;&nbsp;&nbsp;<span class="ckeckout">Ταμείο &#8594;</span>
+        </a>
+    </div>
 
-<script src="../js/cart.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+
+<?php } ?>
