@@ -84,7 +84,7 @@
                         <a target="_blank" href="https://www.youtube.com/watch?v=8i0IzSPVUI4&list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3&index=1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
-                
+                    <div>
                         <div>
                             <img src="images/featured/feature2.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
                         </div>
@@ -102,7 +102,7 @@
                     </div>
                     
                     
-                <div>
+                
                     
                     
                     
