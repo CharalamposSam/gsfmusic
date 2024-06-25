@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/playlist?list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
+                <a target="_blank" href="https://www.youtube.com/watch?v=zXb9qEYv-dA&ab_channel=GSFMusicOfficial" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
                     <img src="images/featured/homeHero.jpg" alt="hero">
                 </a>
             </div>
@@ -77,15 +77,14 @@
             <div class="slider">
                 <div class="featured">
 
-                <div>
-                        <div>
-                            <img src="images/featured/feature.jpg" alt="Ο Χαμαμζτής">
+                    <div>
+                        <div >
+                            <img src="images/featured/featured.jpg" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=xvSl6ZzdOIQ&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=8i0IzSPVUI4&list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3&index=1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
-                    
-                    
-                <div>
+
+                
                         <div>
                             <img src="images/featured/feature2.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
                         </div>
@@ -93,13 +92,17 @@
                     </div>
 
 
+                    
+                    
                     <div>
-                        <div >
-                            <img src="images/featured/featured3.jpg" alt="Δανιέλα Χατζή">
+                        <div>
+                            <img src="images/featured/feature3.jpg" alt="Ο Χαμαμζτής">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=2SU3r2Xqo54&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=xvSl6ZzdOIQ&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
+                    
+                <div>
                     
                     
                     
