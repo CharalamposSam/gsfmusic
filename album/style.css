@@ -244,6 +244,9 @@ body main .albums .players .buttons a .deezerBtn {
 body main .albums .players .buttons a .tidalBtn {
   background-color: #000000;
 }
+body main .albums .players .buttons a .tiktokBtn {
+  background-color: #000000;
+}
 body main .albums .players .buttons a .soundcloudBtn {
   background: rgb(255, 42, 0);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(255, 42, 0)), color-stop(100%, rgb(231, 56, 39)));
