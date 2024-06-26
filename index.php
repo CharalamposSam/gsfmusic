@@ -264,6 +264,9 @@ if ( isset( $_GET[ 's' ] ) ) {
                     if (album.tidal != '')
                         buttons += `<a target="_blank" href="${album.tidal}"><button class="tidalBtn" title="Tidal"><img src="icons/tidal.png" alt="tidal"></button></a>`
 
+                    if (album.tiktok != '')
+                    buttons += `<a target="_blank" href="${album.tiktok}"><button class="tiktokBtn" title="TikTok"><img src="icons/tiktok.png" alt="tiktok"></button></a>`
+
                     if (album.soundcloud != '')
                         buttons += `<a target="_blank" href="${album.soundcloud}"><button class="soundcloudBtn" title="Soundcloud"><img src="icons/soundcloud.png" alt="soundcloud"></button></a>`
 
@@ -362,8 +365,8 @@ if ( isset( $_GET[ 's' ] ) ) {
                         if (album.tidal != '')
                         buttons += `<a target="_blank" href="${album.tidal}"><button class="tidalBtn" title="Tidal"><img src="icons/tidal.png" alt="tidal"></button></a>`
 
-                        if (album.tiktok != '')
-                        buttons += `<a target="_blank" href="${album.tiktok}"><button class="tiktokBtn" title="TikTok"><img src="icons/tiktok.png" alt="tiktok"></button></a>`
+                        // if (album.tiktok != '')
+                        // buttons += `<a target="_blank" href="${album.tiktok}"><button class="tiktokBtn" title="TikTok"><img src="icons/tiktok.png" alt="tiktok"></button></a>`
 
                         if (album.soundcloud != '')
                         buttons += `<a target="_blank" href="${album.soundcloud}"><button class="soundcloudBtn" title="Soundcloud"><img src="icons/soundcloud.png" alt="soundcloud"></button></a>`
