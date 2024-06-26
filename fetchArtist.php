@@ -7,7 +7,7 @@ if(isset($_GET['artist'])){
 
 $query = "SELECT connector.album_code, connector.art, connector.links, main.code, main.num_of_tracks, main.duration, main.cd,
 main.spotify, main.youtube, main.apple, main.amazon, main.deezer, main.tidal,
-main.soundcloud, artists.type_of_page
+main.soundcloud, main.tiktok, artists.type_of_page
 FROM connector
 INNER JOIN main ON connector.album_code=main.code
 INNER JOIN artists ON connector.connect_codename = artists.artist_codename
