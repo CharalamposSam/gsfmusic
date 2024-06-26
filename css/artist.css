@@ -798,6 +798,10 @@ main .albums .album .details .buttons a .tidalBtn {
   background-color: #000000;
 }
 
+main .albums .album .details .buttons a .tiktokBtn {
+  background-color: #000000;
+}
+
 main .albums .album .details .buttons a .soundcloudBtn {
   background: #ff2a00;
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff2a00), color-stop(100%, #e73827));
