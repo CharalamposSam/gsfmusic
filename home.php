@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=zXb9qEYv-dA&ab_channel=GSFMusicOfficial" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
+                <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg&ab_channel=GSFMusicOfficial" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
                     <img src="images/featured/homeHero.jpg" alt="hero">
                 </a>
             </div>
