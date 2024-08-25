@@ -88,7 +88,7 @@
 
                     <div>
                         <div>
-                            <img src="images/featured/feature2s.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
+                            <img src="images/featured/feature2a.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
                         </div>
                         <a target="_blank" href="https://www.youtube.com/watch?v=mjQ-gW453NQ&list=PLglOs-zK7DJAYzmXFOm_lYJpbkD1NxScS&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
