@@ -371,7 +371,7 @@ if ( isset( $_GET[ 's' ] ) ) {
                         if (album.soundcloud != '')
                         buttons += `<a target="_blank" href="${album.soundcloud}"><button class="soundcloudBtn" title="Soundcloud"><img src="icons/soundcloud.png" alt="soundcloud"></button></a>`
 
-                        const theAlbum = `<div class="cover"><div class="moreDetails"></div><img src="images/covers/${album.code}.jpg" alt="Cover"></div>
+                        const theAlbum = `<div class="cover"><div class="moreDetails"></div><img src="/covers/${album.code}.jpg" alt="Cover"></div>
                                             <div class="details">
                                                 <div id="${album.code}" class="tags">
                                                 </div>
