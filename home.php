@@ -67,8 +67,8 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg&ab_channel=GSFMusicOfficial" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
-                    <img src="images/featured/homeHero.jpg" alt="hero">
+                <a target="_blank" href="https://www.youtube.com/watch?v=hLYoEyXpdkQ" alt="Τάκης Ανθής - Δεν με καταλαβαίνεις">
+                    <img src="images/featured/homeHero_a.jpg" alt="hero">
                 </a>
             </div>
         </div>
@@ -77,28 +77,28 @@
             <div class="slider">
                 <div class="featured">
 
+                    
+
                     <div>
-                        <div >
-                            <img src="images/featured/featured.jpg" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
+                        <div>
+                            <img src="images/featured/feature1a.jpg" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=8i0IzSPVUI4&list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3&index=1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
                     <div>
                         <div>
-                            <img src="images/featured/feature2.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
+                            <img src="images/featured/feature2s.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
                         </div>
                         <a target="_blank" href="https://www.youtube.com/watch?v=mjQ-gW453NQ&list=PLglOs-zK7DJAYzmXFOm_lYJpbkD1NxScS&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
 
-                    
-                    
                     <div>
-                        <div>
-                            <img src="images/featured/feature3.jpg" alt="Ο Χαμαμζτής">
+                        <div >
+                            <img src="images/featured/featured3a.jpg" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=xvSl6ZzdOIQ&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=8i0IzSPVUI4&list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3&index=1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
                     
                     
