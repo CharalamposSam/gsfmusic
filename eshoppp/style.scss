@@ -87,44 +87,41 @@ body {
         }
 
         .title {
-          font-size: 16px;
-          padding: 0 10px;
+          font-size: 18px;
           font-weight: 600;
-          margin: 10px 0;
-          text-align: center;
         }
 
         .artists {
           font-size: 14px;
           font-weight: 400;
-          margin: 10px 0;
+          margin: 15px 0 30px;
         }
 
         .prize {
-          text-align: center;
           margin: 30px 0;
+          font-size: 16px;
+          font-weight: 900;
+          text-align: center;
         }
 
         .buttons {
-          display: flex;
-          justify-content: center;
-
           div {
-            margin: 0 5px;
-            background-color: white;
-            border-radius: 10px;
-            font-size: 16px;
-            width: 55px;
-            height: 55px;
+            height: 40px;
+            width: 100%;
             text-align: center;
+            background-color: rgb(84 1 1);
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            display: grid;
-            place-items: center;
-            position: relative;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           }
 
           div:hover {
-            transform: scale(1.05);
+            background-color: rgb(95, 1, 1);
           }
 
           .details {
@@ -138,84 +135,6 @@ body {
             }
           }
         }
-      }
-
-      .detailsCont {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 300px;
-        height: 415px;
-        background-color: #8f0d0d;
-        transition: 0.3s ease-in-out;
-        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.75);
-        transform-origin: bottom;
-        scale: 1 0;
-        padding: 20px;
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-
-        div {
-          opacity: 0;
-          transition: opacity 0.2s;
-          max-height: 320px;
-          overflow: auto;
-          margin-bottom: 20px;
-          background-image: linear-gradient(to top, #8f0d0d, #8f0d0d),
-            linear-gradient(to top, #8f0d0d, #8f0d0d),
-            linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.25),
-              rgba(255, 255, 255, 0)
-            );
-          background-position: bottom center, top center, bottom center,
-            top center;
-          background-color: #8f0d0d;
-          background-repeat: no-repeat;
-          background-size: 100% 20px, 100% 20px, 100% 10px, 100% 10px;
-          background-attachment: local, local, scroll, scroll;
-
-          p {
-            margin: 6px 0;
-          }
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-          background: #810e0e;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-          background: #6d0c0c;
-        }
-
-        a {
-          width: 150px;
-          height: 40px;
-          background-color: rgba(0, 0, 0, 0.9);
-          border-radius: 10px;
-          color: white;
-          padding: 10px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-
-          img {
-            width: 20px;
-            filter: invert(1);
-            transform: translateY(-2px);
-          }
-        }
-      }
-
-      .enableDetails {
-        scale: 1 1;
       }
     }
   }
