@@ -43,6 +43,14 @@ if(isset($_GET['artistHomePage']) && isset($_GET['ar'])){
 }
 
 
+if(isset($_GET['albumsPage']) && isset($_GET['ar'])){
+    $ar = $_GET['ar'];
+    $query = "SELECT artist_name FROM artists where artists.artist_codename = '$ar'";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
+}
+
 
 
 
