@@ -54,7 +54,7 @@ if(isset($_GET['albumsPage']) && isset($_GET['ar'])){
 
 
 
-if(isset($_GET['eshoppp']) && isset($_GET['search'])) {
+if(isset($_GET['eshop']) && isset($_GET['search'])) {
     
     $search = htmlspecialchars($_GET['search'], ENT_QUOTES, 'UTF-8');
     $searchTrim = trim($search);
@@ -65,7 +65,7 @@ if(isset($_GET['eshoppp']) && isset($_GET['search'])) {
     $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
     echo json_encode($artistprofile);
 
-} else if(isset($_GET['eshoppp'])) {
+} else if(isset($_GET['eshop'])) {
     
     $r = $_GET['range'];
     $l = $_GET['limit'];
