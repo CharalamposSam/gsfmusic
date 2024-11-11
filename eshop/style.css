@@ -12,6 +12,19 @@ body {
   justify-content: center;
   font-family: "Montserrat", Arial, sans-serif;
   overflow: auto;
+  position: relative;
+  max-width: calc(100vw - 10px);
+}
+body #overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 body main {
   width: 100%;
@@ -21,13 +34,28 @@ body main {
 body main .searchContainer {
   width: 100%;
   margin: 10px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1001;
+}
+body main .searchContainer .error {
+  margin-bottom: 10px;
+  color: red;
+  font-weight: 900;
+  transition: all 0.2s;
+  opacity: 0;
+  height: 23px;
 }
 body main .searchContainer .searchBar {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 body main .searchContainer .searchBar input {
-  width: 80%;
+  width: 1000px;
+  min-width: 80%;
   height: 35px;
   font-size: 16px;
   color: white;
@@ -45,6 +73,99 @@ body main .searchContainer .searchBar input::-moz-placeholder {
 body main .searchContainer .searchBar input::placeholder {
   color: rgb(197, 197, 197);
   font-style: italic;
+}
+body main .searchContainer .searchBar .resultsContainer {
+  width: 80%;
+  background-color: #584d4d;
+  position: absolute;
+  overflow: scroll;
+  z-index: 3;
+  top: 80px;
+  border-radius: 7px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+body main .searchContainer .searchBar .resultsContainer .searchLoader {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+body main .searchContainer .searchBar .searchResults {
+  display: grid;
+  grid-template: auto/repeat(3, 240px);
+  grid-gap: 27px;
+  justify-content: center;
+  padding: 40px 0;
+  max-height: 585px;
+  position: relative;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum {
+  width: 220px;
+  background-color: #8f0d0d;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchTitle {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchCover {
+  margin: 10px 0;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchCover img {
+  width: 100%;
+  display: block;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchTags {
+  width: 200px;
+  margin-left: 10px;
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  min-height: 18px;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchTags .searchTag {
+  padding: 3px 4px;
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  margin-right: 5px;
+  border-radius: 7px;
+  font-weight: 500;
+  text-wrap: wrap;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchTags .searchTag a {
+  color: black;
+  text-decoration: none;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchPrize {
+  margin: 10px 0;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchButtons div {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(84, 1, 1);
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  font-size: 14px;
+}
+body main .searchContainer .searchBar .searchResults .searchAlbum .searchButtons div:hover {
+  background-color: rgb(95, 1, 1);
 }
 body main .searchContainer .categories {
   margin-top: 25px;
@@ -94,6 +215,9 @@ body main .albums .album .title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 14px;
+  height: 45px;
+  overflow: hidden;
+  text-align: center;
 }
 body main .albums .album .tags {
   width: 300px;
