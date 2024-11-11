@@ -87,7 +87,7 @@
         function addAlbums(firstTime = false) {
 
           fetch(
-            `../fetchArtist.php?eshoppp&ar&range=${range}&limit=${limit}`
+            `../fetchArtist.php?eshop&ar&range=${range}&limit=${limit}`
           )
           .then(res => res.json())
           .then(data => {
@@ -227,7 +227,7 @@
 
 
           fetch(
-            `../fetchArtist.php?eshoppp&search=${this.value}`
+            `../fetchArtist.php?eshop&search=${this.value}`
           )
           .then(res => res.json())
           .then(data => {
