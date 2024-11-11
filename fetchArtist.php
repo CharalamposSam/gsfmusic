@@ -43,6 +43,38 @@ if(isset($_GET['artistHomePage']) && isset($_GET['ar'])){
 }
 
 
+if(isset($_GET['albumsPage']) && isset($_GET['ar'])){
+    $ar = $_GET['ar'];
+    $query = "SELECT artist_name FROM artists where artists.artist_codename = '$ar'";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
+}
+
+
+
+
+if(isset($_GET['eshoppp']) && isset($_GET['search'])) {
+    
+    $search = htmlspecialchars($_GET['search'], ENT_QUOTES, 'UTF-8');
+    $searchTrim = trim($search);
+    $searchFilterd = filter_var($searchTrim, FILTER_SANITIZE_STRING);
+
+    $query = "SELECT DISTINCT * FROM albums WHERE artist_name LIKE '%$search%' OR title LIKE '%$search%' OR description LIKE '%$searchFilterd%';";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
+
+} else if(isset($_GET['eshoppp'])) {
+    
+    $r = $_GET['range'];
+    $l = $_GET['limit'];
+    $query = "SELECT * FROM `albums` order by id DESC LIMIT $r,$l;";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
+
+}
 
 
 

@@ -2,7 +2,7 @@
   if ( isset( $_GET[ 'a' ] ) ) {
     require_once('../conn.php'); 
     $a = strtolower($_GET[ 'a' ]);
-    $sql = "SELECT * from albums where code = '$a'";              
+    $sql = "SELECT * from albums where album_code = '$a'";              
     $result = mysqli_query( $conn, $sql );
 
     if ( !$conn ) {
@@ -15,8 +15,8 @@
 
     $sql = "SELECT albums.title, albums.cd, albums.prize, albums.availability, albums.description, albums.embeddedLink, main.*
     FROM albums
-    LEFT JOIN main ON albums.code = main.code
-    WHERE albums.code = '$a';";              
+    LEFT JOIN main ON albums.album_code = main.code
+    WHERE albums.album_code = '$a';";              
     $result = mysqli_query( $conn, $sql );
 
     if ( mysqli_num_rows( $result ) == 1 ) {
