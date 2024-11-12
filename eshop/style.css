@@ -112,7 +112,7 @@ body main .searchContainer .searchBar .searchResults .searchAlbum {
   border-radius: 7px;
 }
 body main .searchContainer .searchBar .searchResults .searchAlbum .searchTitle {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-weight: 600;
 }
@@ -162,7 +162,7 @@ body main .searchContainer .searchBar .searchResults .searchAlbum .searchButtons
   transition: all 0.2s ease;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 12px;
 }
 body main .searchContainer .searchBar .searchResults .searchAlbum .searchButtons div:hover {
   background-color: rgb(95, 1, 1);
