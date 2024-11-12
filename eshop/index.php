@@ -292,7 +292,7 @@
 
                   document.querySelector(`[data-search-more="${album.album_code}"]`).addEventListener('click', function() {
                     window.open(`../album/index.php?a=${this.attributes['data-search-more'].value}`, '_blank').focus();
-                  })comment 2
+                  })
               })
             }, 500);
 
