@@ -294,6 +294,7 @@
                     window.open(`../album/index.php?a=${this.attributes['data-search-more'].value}`, '_blank').focus();
                   })
 
+                <?php
                   // album.artist_name.split(", ").forEach((artist, i) => {
                     
                   //   if (artist === '') return
@@ -303,7 +304,7 @@
                   //   div.classList.add('searchTag')
                   //   div.innerHTML = tagakia
                   //   document.querySelector(`[data-search-code="${album.album_code}"] .searchTags`).appendChild(div)
-                  // })
+                  // }) ?>
               })
             }, 500);
 
