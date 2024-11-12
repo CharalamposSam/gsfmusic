@@ -115,6 +115,9 @@ body main .searchContainer .searchBar .searchResults .searchAlbum .searchTitle {
   font-size: 12px;
   text-align: center;
   font-weight: 600;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
 body main .searchContainer .searchBar .searchResults .searchAlbum .searchCover {
   margin: 10px 0;
@@ -153,7 +156,7 @@ body main .searchContainer .searchBar .searchResults .searchAlbum .searchButtons
   width: 100%;
   text-align: center;
   background-color: rgb(84, 1, 1);
-  margin: 5px;
+  margin: 10px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,6 +221,10 @@ body main .albums .album .title {
   height: 45px;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
 }
 body main .albums .album .tags {
   width: 300px;
