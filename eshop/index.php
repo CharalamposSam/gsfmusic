@@ -292,19 +292,7 @@
 
                   document.querySelector(`[data-search-more="${album.album_code}"]`).addEventListener('click', function() {
                     window.open(`../album/index.php?a=${this.attributes['data-search-more'].value}`, '_blank').focus();
-                  })
-
-                <?php
-                  // album.artist_name.split(", ").forEach((artist, i) => {
-                    
-                  //   if (artist === '') return
-
-                  //   let tagakia = `<a href="https://www.gsfmusic.gr/${album.artist_code.split(", ")[i]}" target="_blank">${artist}</a>`
-                  //   let div = document.createElement('div')
-                  //   div.classList.add('searchTag')
-                  //   div.innerHTML = tagakia
-                  //   document.querySelector(`[data-search-code="${album.album_code}"] .searchTags`).appendChild(div)
-                  // }) ?>
+                  })comment 2
               })
             }, 500);
 
