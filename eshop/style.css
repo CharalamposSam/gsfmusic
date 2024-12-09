@@ -283,8 +283,27 @@ body main .albums .album .buttons .addToCart img {
     grid-template: auto/repeat(2, 340px);
   }
 }
+@media only screen and (max-width: 1050px) {
+  body main .searchContainer .searchBar {
+    max-width: 80%;
+  }
+  body main .searchContainer .searchBar input {
+    max-width: 100%;
+    min-width: 300px;
+  }
+  body main .searchContainer .searchBar .searchResults {
+    display: grid;
+    grid-template: auto/repeat(2, 240px);
+  }
+}
 @media only screen and (max-width: 880px) {
   body main .albums {
     grid-template: auto/repeat(1, 340px);
+  }
+}
+@media only screen and (max-width: 700px) {
+  body main .searchContainer .searchBar .searchResults {
+    display: grid;
+    grid-template: auto/repeat(1, 240px);
   }
 }/*# sourceMappingURL=style.css.map */
