@@ -11,6 +11,14 @@ main header {
   display: flex;
   padding: 0 40px;
   margin-bottom: 20px;
+
+  div {
+    display: flex;
+  }
+
+  .links {
+    margin-left: auto;
+  }
 }
 
 main header a {
@@ -80,4 +88,42 @@ main header .emailMenuIcon .emailTag:after {
   z-index: 51;
   -webkit-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out;
+}
+
+@media only screen and (max-width: 570px) {
+  main header {
+    padding: 0 8px;
+  }
+
+  main header a {
+    margin: auto 6px;
+  }
+
+  main header a img {
+    width: 42px;
+  }
+
+  main header .logo img {
+    width: 45px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  main header {
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+    margin: 0;
+    padding: 0 40px;
+
+    div {
+      justify-content: center;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .links {
+      margin: 10px auto;
+    }
+  }
 }
