@@ -879,6 +879,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 570px) {
+  main .hero {
+    margin-top: 30px;
+  }
+}
+
 @media only screen and (max-width: 530px) {
   main header {
     padding: 0 20px;
