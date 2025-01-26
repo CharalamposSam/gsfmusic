@@ -124,6 +124,9 @@ main header .emailMenuIcon .emailTag:after {
 
     .links {
       margin: 10px auto;
+      display: grid;
+      grid-template: auto / repeat(6, 60px);
+      place-items: center;
     }
   }
 }
