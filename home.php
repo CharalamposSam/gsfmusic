@@ -67,7 +67,7 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=hLYoEyXpdkQ" alt="Τάκης Ανθής - Δεν με καταλαβαίνεις">
+                <a target="_blank" href="https://www.youtube.com/watch?v=CBlpXzMjROg&ab_channel=GSFMusicOfficial" alt="Τάκης Ανθής - Δεν με καταλαβαίνεις">
                     <img src="images/featured/homeHero_a.jpg" alt="hero">
                 </a>
             </div>
