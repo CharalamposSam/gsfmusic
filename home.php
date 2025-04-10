@@ -67,8 +67,8 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=CBlpXzMjROg&ab_channel=GSFMusicOfficial" alt="Τάκης Ανθής - Δεν με καταλαβαίνεις">
-                    <img src="images/featured/homeHero_a.jpg" alt="hero">
+                <a target="_blank" href="https://gsfmusic.gr/youtube/878" alt="Δημήτρης Γενεθλή - Όπως τα άκουσα">
+                    <img src="images/featured/hero.jpg" alt="hero">
                 </a>
             </div>
         </div>
@@ -81,16 +81,16 @@
 
                     <div>
                         <div>
-                            <img src="images/featured/feature1a.jpg" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
+                            <img src="images/featured/feature1111.jpg" alt="Τάκης Ανθής - Προτιμάς">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=CBlpXzMjROg&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
                     <div>
                         <div>
-                            <img src="images/featured/feature2a.jpg" alt="Δημήτρης Χατζής & Νίκος Τζουκόπουλος">
+                            <img src="images/featured/feature222.jpg" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=mjQ-gW453NQ&list=PLglOs-zK7DJAYzmXFOm_lYJpbkD1NxScS&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
 
