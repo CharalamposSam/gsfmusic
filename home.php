@@ -81,9 +81,9 @@
 
                     <div>
                         <div>
-                            <img src="images/featured/feature1111.jpg" alt="Τάκης Ανθής - Προτιμάς">
+                            <img src="images/featured/feature_1.jpg" alt="Τάκης Ανθής - Προτιμάς">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=CBlpXzMjROg&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=HyJdWCVxNtI&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
                     <div>
