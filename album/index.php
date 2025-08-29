@@ -85,7 +85,7 @@
 
           <?php if ($row[ 'cd' ] == 1) ?>
             <div class="prize">
-              <button <?php if ($row[ 'availability' ] == 0) echo 'class="unavailable"' ?> data-album="<?php echo $a; ?>">Αγορά CD &nbsp;<span><?php echo $row[ 'title' ]; ?>€</span></button>
+              <button <?php if ($row[ 'availability' ] == 0) echo 'class="unavailable"' ?> data-album="<?php echo $a; ?>">Αγορά CD &nbsp;<span><?php echo $row[ 'prize' ]; ?>€</span></button>
             </div>
           <?php ?>
         </div>
