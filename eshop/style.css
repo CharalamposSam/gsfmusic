@@ -39,7 +39,6 @@ body main .searchContainer {
   flex-direction: column;
   align-items: center;
   z-index: 1001;
-  overflow: scroll;
 }
 body main .searchContainer .error {
   margin-bottom: 10px;
@@ -79,6 +78,8 @@ body main .searchContainer .searchBar .resultsContainer {
   width: 80%;
   background-color: #584d4d;
   position: absolute;
+  overflow: scroll;
+  max-height: 585px;
   z-index: 3;
   top: 80px;
   border-radius: 7px;
@@ -99,7 +100,6 @@ body main .searchContainer .searchBar .searchResults {
   grid-gap: 27px;
   justify-content: center;
   padding: 40px 0;
-  max-height: 585px;
   position: relative;
 }
 body main .searchContainer .searchBar .searchResults .searchAlbum {
