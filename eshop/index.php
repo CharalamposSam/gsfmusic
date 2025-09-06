@@ -112,12 +112,12 @@
 
                   const albumDetails = `
                     <div class="title" title="${album.title}">${first45Chars ? first45Chars : album.title}</div>
-                    <div class="cover"><img src="../images/covers/${album.album_code}.jpg" alt="" /></div>
+                    <div class="cover"><div class="moreDetails"></div><img src="../images/covers/${album.album_code}.jpg" alt="" /></div>
                     <div class="tags"></div>
                     <div class="prize">${album.prize}.00€</div>
                     <div class="buttons">
                       <!-- <div class="details">Προσθήκη στο καλάθι</div> -->
-                      <div class="details" data-more="${album.album_code}">Περισσότερα</div>
+                      <div class="openAlbumDetails" data-more="${album.album_code}">Περισσότερα</div>
                     </div>
                   `
                   theAlbum.innerHTML = albumDetails
@@ -128,16 +128,65 @@
                     window.open(`../album/${this.attributes['data-more'].value}`, '_blank').focus();
                   })
 
-                  album.artist_name.split(", ").forEach((artist, i) => {
-                    
-                    if (artist === '') return
+                  
+                  // If tags exist
+                  if (album.artist_name) {
 
-                    let tagakia = `<a href="https://www.gsfmusic.gr/${album.artist_code.split(", ")[i]}" target="_blank">${artist}</a>`
-                    let div = document.createElement('div')
-                    div.classList.add('tag')
-                    div.innerHTML = tagakia
-                    document.querySelector(`[data-code="${album.album_code}"] .tags`).appendChild(div)
-                  })
+                    const tags = document.querySelector(`[data-code="${album.album_code}"] .tags`)
+
+                    album.artist_name.split(", ").forEach((artist, i) => {
+
+                      if (artist === '') return
+
+                      let tagakia = `<a href="https://www.gsfmusic.gr/${album.artist_code.split(", ")[i]}" target="_blank">${artist}</a>`
+                      let div = document.createElement('div')
+                      div.classList.add('tag')
+                      div.innerHTML = tagakia
+                     tags.appendChild(div)
+                    })
+
+                    if (tags.querySelectorAll('.tag')[0].parentNode.clientHeight > 20) {
+
+                      const allTags = tags.querySelectorAll('.tag')
+                      const moreDetails = tags.parentElement.querySelector('.cover .moreDetails')
+                      
+                      moreDetails.style.padding = '10px 0'
+                        allTags.forEach(tag => {
+                            tag.remove()
+                            moreDetails.appendChild(tag)
+                        })
+
+
+                      let div = document.createElement('div')
+                      div.innerHTML = `${allTags.length} Καλλιτέχνες <img src="../icons/moreDetailsArrow.png" alt="arrow up">`
+                      div.classList.add('tag')
+                      div.classList.add('moreDetailsButton')
+                      tags.appendChild(div)
+
+                      let moreDetailsFlag = false
+                      div.addEventListener('click', () => {
+
+                          if (moreDetailsFlag) {
+                              moreDetails.style.bottom = '-100%'
+                              moreDetails.parentNode.style.boxShadow = '0 0 0 0 rgba(0, 0, 0, 0.5)'
+                              moreDetailsFlag = false
+                              div.querySelector('img').style.transform = 'rotate(0)'
+                          } else {
+                              moreDetails.style.bottom = '0'
+                              moreDetailsFlag = true
+                              setTimeout(() => {
+                                moreDetails.parentNode.style.boxShadow = '0 0 10px 0 rgba(0, 0, 0, 0.5)' 
+                              }, 200)
+                              div.querySelector('img').style.transform = 'rotate(-180deg)'
+                          }
+                          
+                      })
+                    }
+
+                  }
+                  
+
+
               })
           })
           range += 6
@@ -283,7 +332,7 @@
                     <!--<div class="searchPrize">${album.prize}.00€</div>-->
                     <div class="searchButtons">
                       <!-- <div class="details">Προσθήκη στο καλάθι</div> -->
-                      <div class="searchDetails" data-search-more="${album.album_code}">Περισσότερα</div>
+                      <div class="openAlbumSearchDetails" data-search-more="${album.album_code}">Περισσότερα</div>
                     </div>
                   `
                   theAlbum.innerHTML = albumDetails

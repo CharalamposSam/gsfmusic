@@ -248,6 +248,19 @@ body main .albums .album .tags .tag a {
   color: black;
   text-decoration: none;
 }
+body main .albums .album .tags .moreDetailsButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+body main .albums .album .tags .moreDetailsButton img {
+  display: block;
+  width: 12px;
+  margin: 5px;
+  transform: rotate(0);
+  transition: transform 0.4s ease-in-out;
+}
 body main .albums .album .prize {
   margin: 30px 0;
   font-size: 16px;
