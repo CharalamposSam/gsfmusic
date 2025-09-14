@@ -1,14 +1,23 @@
 <?php
   if ( isset( $_GET[ 'a' ] ) ) {
     require_once('../conn.php'); 
-    $a = strtolower($_GET[ 'a' ]);
-    $sql = "SELECT * from albums where album_code = '$a'";              
-    $result = mysqli_query( $conn, $sql );
 
     if ( !$conn ) {
       die( "Connection failed: " . mysqli_connect_error() );
     }
+
+    $a = strtolower($_GET[ 'a' ]);
+    $sql = "SELECT * FROM albums WHERE album_code = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $a);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+
+    
           
+
+    
     if ( mysqli_num_rows( $result ) == 1 ) { 
 
       
@@ -85,7 +94,9 @@
 
           <?php if ($row[ 'cd' ] == 1) ?>
             <div class="prize">
-              <button <?php if ($row[ 'availability' ] == 0) echo 'class="unavailable"' ?> data-album="<?php echo $a; ?>">Αγορά CD &nbsp;<span><?php echo $row[ 'prize' ]; ?>.00€</span></button>
+              <button <?php if ($row[ 'availability' ] == 0) echo 'class="unavailable"' ?> data-album="<?php echo $a; ?>">
+                <?php echo ($row['availability'] == 0) ? "Εξαντλήθηκε" : "Αγορά CD &nbsp;<span>" . $row['prize'] . ".00€</span>"; ?>
+              </button>
             </div>
           <?php ?>
         </div>
