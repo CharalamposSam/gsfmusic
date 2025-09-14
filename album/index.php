@@ -6,7 +6,7 @@
       die( "Connection failed: " . mysqli_connect_error() );
     }
 
-    $a = strtolower($_GET[ 'a' ]);
+    $a = $_GET[ 'a' ];
     $sql = "SELECT * FROM albums WHERE album_code = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $a);
@@ -90,7 +90,7 @@
           <!-- <div class="tags">
             <div class="tag">Νίκος Τζουκόπουλος</div>
           </div> -->
-          <div class="tracksDuration"><?php echo $row[ 'num_of_tracks' ]; ?> tracks / <?php echo $row[ 'duration' ]; ?> min</div>
+          <div class="tracksDuration" <?php if ($row[ 'num_of_tracks' ] == null) echo 'style="display: none;"' ?>><?php echo $row[ 'num_of_tracks' ]; ?> tracks / <?php echo $row[ 'duration' ]; ?> min</div>
 
           <?php if ($row[ 'cd' ] == 1) ?>
             <div class="prize">
