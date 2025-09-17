@@ -60,8 +60,8 @@ if(isset($_GET['eshop']) && isset($_GET['search'])) {
     $searchTrim = trim($search);
     $searchFilterd = filter_var($searchTrim, FILTER_SANITIZE_STRING);
 
-    // $query = "SELECT DISTINCT * FROM albums WHERE artist_name LIKE '%$search%' OR title LIKE '%$search%' OR description LIKE '%$searchFilterd%';";
-    $query = "SELECT * FROM albums WHERE MATCH(artist_name, title, description) AGAINST ('$search' IN NATURAL LANGUAGE MODE);";
+    $query = "SELECT DISTINCT * FROM albums WHERE artist_name LIKE '%$search%' OR title LIKE '%$search%' OR description LIKE '%$searchFilterd%';";
+    // $query = "SELECT * FROM albums WHERE MATCH(artist_name, title, description) AGAINST ('$search' IN NATURAL LANGUAGE MODE);";
     $result = mysqli_query($conn, $query);
     $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
     echo json_encode($artistprofile);
