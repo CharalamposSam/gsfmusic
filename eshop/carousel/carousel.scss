@@ -52,5 +52,28 @@
         pointer-events: none;
       }
     }
+
+    .buttons {
+      width: 100%;
+
+      .details {
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(84, 1, 1);
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .details:hover {
+        background-color: rgb(95, 1, 1);
+      }
+    }
   }
 }

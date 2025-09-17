@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/artist.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="carousel/carousel.css" />
 
     <script src="../js/common.js" defer></script>
     <script src="js/eshop.js" defer></script>
+    <script src="carousel/app.js" defer></script>
   </head>
   <body>
     <div id="overlay"></div>
@@ -53,6 +55,45 @@
           <div class="category margin">Λαϊκά</div>
         </div> -->
       </div> 
+
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="track">
+        
+        <?php
+
+        require_once('../conn.php'); 
+
+        if ( !$conn ) {
+          die( "Connection failed: " . mysqli_connect_error() );
+        }
+
+        $sql = "SELECT a.title, a.album_code, c.orderby FROM albums AS a JOIN carousel AS c ON a.album_code = c.code WHERE a.visibility = 1 ORDER BY c.orderby;";             
+        $result = mysqli_query( $conn, $sql );
+
+          while ( $row = mysqli_fetch_assoc( $result ) ) { ?>
+
+          <div class="carousel-slide">
+            <div class="card">
+              <div class="album">
+                <div class="title"><?php echo $row[ 'title' ]; ?></div>
+                <div class="cover"><img src="../images/covers/<?php echo $row[ 'album_code' ]; ?>.jpg" alt="" /></div>
+                <div class="buttons">
+                  <div class="details carouselOpenAlbumDetails" onCLick="carouselDetailsOpen(<?php echo $row[ 'album_code' ]; ?>)">Περισσότερα</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <?php } ?>
+        </div>
+      </div>
+
+      <script>
+          function carouselDetailsOpen(code) {
+             window.open(`../album/${code}`, '_blank').focus();
+          }
+      </script>
+
       <div class="albums"></div>
 
       <script>
