@@ -41,6 +41,6 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^giveaway giveaway.php [NC,L]
 
 
-RewriteRule ^album/([0-9]+|L|S3|N100)$ album/index.php?a=$1 [NC,L]
+RewriteRule ^album/([0-9]+|L|S3|N100|N101)$ album/index.php?a=$1 [NC,L]
 
 RewriteRule ^([a-zA-Z0-9-]+)$ index.php?s=$1 [NC,L] 
