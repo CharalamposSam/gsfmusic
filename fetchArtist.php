@@ -1,149 +1,79 @@
 <?php
 require_once('conn.php');
-
-header('Content-Type: application/json; charset=utf-8');
-
-// ========== 1. Artist ==========
-if (isset($_GET['artist'])) {
+if(isset($_GET['artist'])){
     $s = $_GET['artist'];
-    $r = filter_input(INPUT_GET, 'range', FILTER_VALIDATE_INT);
-    $l = filter_input(INPUT_GET, 'limit', FILTER_VALIDATE_INT);
+    $r = $_GET['range'];
+    $l = $_GET['limit'];
 
-    if ($r === false || $l === false) {
-        http_response_code(400);
-        echo json_encode(["error" => "Invalid parameters."]);
-        exit;
-    }
-
-    $sql = "SELECT connector.album_code, connector.art, connector.links, 
-                   main.code, main.num_of_tracks, main.duration, main.cd,
-                   main.spotify, main.youtube, main.apple, main.amazon, main.deezer, 
-                   main.tidal, main.soundcloud, main.tiktok, 
-                   artists.type_of_page
-            FROM connector
-            INNER JOIN main ON connector.album_code = main.code
-            INNER JOIN artists ON connector.connect_codename = artists.artist_codename
-            WHERE connect_codename = ?
-            ORDER BY orderby DESC
-            LIMIT ?, ?";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sii", $s, $r, $l);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC), JSON_UNESCAPED_UNICODE);
+$query = "SELECT connector.album_code, connector.art, connector.links, main.code, main.num_of_tracks, main.duration, main.cd,
+main.spotify, main.youtube, main.apple, main.amazon, main.deezer, main.tidal,
+main.soundcloud, main.tiktok, artists.type_of_page
+FROM connector
+INNER JOIN main ON connector.album_code=main.code
+INNER JOIN artists ON connector.connect_codename = artists.artist_codename
+where connect_codename = '$s' order by orderby DESC LIMIT $r,$l";
+$result = mysqli_query($conn, $query);
+$links = mysqli_fetch_all($result, MYSQLI_ASSOC);
+echo json_encode($links);
 }
 
 
-// ========== 2. Artist Profile ==========
-if (isset($_GET['artistprofile'])) {
+if(isset($_GET['artistprofile'])){
     $ap = $_GET['artistprofile'];
+    $query = "SELECT artist_name FROM artists where artists.artist_codename = '$ap'";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
+}
 
-    $sql = "SELECT artist_name 
-            FROM artists 
-            WHERE artists.artist_codename = ?";
+if(isset($_GET['artistHomePage']) && isset($_GET['ar'])){
+    $r = $_GET['range'];
+    $l = $_GET['limit'];
 
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $ap);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC), JSON_UNESCAPED_UNICODE);
+    $query = "SELECT artist_codename, artist_name, count(connector.connect_codename) as total, sum(main.num_of_tracks) as summary_tracks, sum(main.duration) as summary_duration
+                FROM artists
+                LEFT JOIN connector ON artists.artist_codename = connector.connect_codename
+                INNER JOIN main ON connector.album_code=main.code
+                GROUP BY artist_codename
+                ORDER BY artist_name
+                LIMIT $r,$l";
+    $result = mysqli_query($conn, $query);
+    $artistHomePage = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistHomePage);
 }
 
 
-// ========== 3. Artist Home Page ==========
-if (isset($_GET['artistHomePage']) && isset($_GET['ar'])) {
-    $r = filter_input(INPUT_GET, 'range', FILTER_VALIDATE_INT);
-    $l = filter_input(INPUT_GET, 'limit', FILTER_VALIDATE_INT);
-
-    if ($r === false || $l === false) {
-        http_response_code(400);
-        echo json_encode(["error" => "Invalid parameters."]);
-        exit;
-    }
-
-    $sql = "SELECT artists.artist_codename, artists.artist_name, 
-                   COUNT(connector.connect_codename) AS total, 
-                   SUM(main.num_of_tracks) AS summary_tracks, 
-                   SUM(main.duration) AS summary_duration
-            FROM artists
-            LEFT JOIN connector ON artists.artist_codename = connector.connect_codename
-            INNER JOIN main ON connector.album_code = main.code
-            GROUP BY artists.artist_codename
-            ORDER BY artists.artist_name
-            LIMIT ?, ?";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $r, $l);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC), JSON_UNESCAPED_UNICODE);
-}
-
-
-// ========== 4. Albums Page ==========
-if (isset($_GET['albumsPage']) && isset($_GET['ar'])) {
+if(isset($_GET['albumsPage']) && isset($_GET['ar'])){
     $ar = $_GET['ar'];
-
-    $sql = "SELECT artist_name 
-            FROM artists 
-            WHERE artists.artist_codename = ?";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $ar);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC), JSON_UNESCAPED_UNICODE);
+    $query = "SELECT artist_name FROM artists where artists.artist_codename = '$ar'";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
 }
 
 
-// ========== 5. Eshop ==========
-if (isset($_GET['eshop']) && isset($_GET['search'])) {
-    // Καθαρισμός input
-    $search = trim($_GET['search']);
 
-    // Ασφάλεια: χρησιμοποιούμε prepared statements
-    $sql = "SELECT DISTINCT * 
-            FROM albums 
-            WHERE artist_name LIKE CONCAT('%', ?, '%') 
-               OR title LIKE CONCAT('%', ?, '%') 
-               OR description LIKE CONCAT('%', ?, '%')";
 
-    $stmt = $conn->prepare($sql);
-    if ($stmt) {
-        $stmt->bind_param("sss", $search, $search, $search);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $artistprofile = $result->fetch_all(MYSQLI_ASSOC);
-        echo json_encode($artistprofile, JSON_UNESCAPED_UNICODE);
-    } else {
-        http_response_code(500);
-        echo json_encode(["error" => "Database error."]);
-    }
+if(isset($_GET['eshop']) && isset($_GET['search'])) {
+    
+    $search = htmlspecialchars($_GET['search'], ENT_QUOTES, 'UTF-8');
+    $searchTrim = trim($search);
+    $searchFilterd = filter_var($searchTrim, FILTER_SANITIZE_STRING);
 
-} elseif (isset($_GET['eshop'])) {
-    // Validation για range & limit
-    $r = filter_input(INPUT_GET, 'range', FILTER_VALIDATE_INT);
-    $l = filter_input(INPUT_GET, 'limit', FILTER_VALIDATE_INT);
+    $query = "SELECT DISTINCT * FROM albums WHERE artist_name LIKE '%$search%' OR title LIKE '%$search%' OR description LIKE '%$searchFilterd%';";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
 
-    if ($r === false || $l === false) {
-        http_response_code(400);
-        echo json_encode(["error" => "Invalid parameters."]);
-        exit;
-    }
+} else if(isset($_GET['eshop'])) {
+    
+    $r = $_GET['range'];
+    $l = $_GET['limit'];
+    $query = "SELECT * FROM `albums` order by id DESC LIMIT $r,$l;";
+    $result = mysqli_query($conn, $query);
+    $artistprofile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    echo json_encode($artistprofile);
 
-    $sql = "SELECT * FROM albums ORDER BY id DESC LIMIT ?, ?";
-    $stmt = $conn->prepare($sql);
-    if ($stmt) {
-        $stmt->bind_param("ii", $r, $l);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $artistprofile = $result->fetch_all(MYSQLI_ASSOC);
-        echo json_encode($artistprofile, JSON_UNESCAPED_UNICODE);
-    } else {
-        http_response_code(500);
-        echo json_encode(["error" => "Database error."]);
-    }
 }
 
 
