@@ -68,7 +68,7 @@
         <div class="hero">
             <div class="heroImg">
                 <a target="_blank" href="https://www.youtube.com/watch?v=sGqn4BKGTX0" alt="Τάκης Ανθής - Θα σου στείλω λουλούδια">
-                    <img src="images/featured/hero123.jpg" alt="hero">
+                    <img src="images/featured/hero5.jpg" alt="hero">
                 </a>
             </div>
         </div>
