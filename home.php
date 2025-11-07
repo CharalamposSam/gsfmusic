@@ -67,8 +67,8 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://gsfmusic.gr/youtube/878" alt="Δημήτρης Γενεθλή - Όπως τα άκουσα">
-                    <img src="images/featured/hero.jpg" alt="hero">
+                <a target="_blank" href="https://www.youtube.com/watch?v=sGqn4BKGTX0" alt="Τάκης Ανθής - Θα σου στείλω λουλούδια">
+                    <img src="images/featured/hero123.jpg" alt="hero">
                 </a>
             </div>
         </div>
@@ -77,13 +77,18 @@
             <div class="slider">
                 <div class="featured">
 
-                    
+                    <div>
+                        <div >
+                            <img src="images/featured/featured3b.jpg" alt="Σπύρος Παππάς - Γιάννης Ζιάκος">
+                        </div>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=QhZ8eaaOvD8&list=PLglOs-zK7DJDYuIlqCj9icX2Tw2y-34Ee">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                    </div>
 
                     <div>
                         <div>
-                            <img src="images/featured/feature_1.jpg" alt="Τάκης Ανθής - Προτιμάς">
+                            <img src="images/featured/feature_1.jpg" alt="Δημήτρης Γενεθλής - Όπως τα άκουσα">
                         </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=HyJdWCVxNtI&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                        <a target="_blank" href=https://www.youtube.com/watch?v=2G79hUDMooI&list=PLglOs-zK7DJA6mncG76D893EuKzbTdabh">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
                     <div>
@@ -94,12 +99,7 @@
                     </div>
 
 
-                    <div>
-                        <div >
-                            <img src="images/featured/featured3a.jpg" alt="60 Χρόνια ΠΕΡΙΚΛΗΣ">
-                        </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=8i0IzSPVUI4&list=PLglOs-zK7DJD83tPo0Tweb-F0PSSp05g3&index=1&ab_channel=GSFMusicOfficial">Περισσότερα <img src="icons/open.png" alt="open"></a>
-                    </div>
+                    
                     
                     
                 
