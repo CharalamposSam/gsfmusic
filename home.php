@@ -86,7 +86,7 @@
 
                     <div>
                         <div>
-                            <img src="images/featured/feature_1.jpg" alt="Δημήτρης Γενεθλής - Όπως τα άκουσα">
+                            <img src="images/featured/feature_122.jpg" alt="Δημήτρης Γενεθλής - Όπως τα άκουσα">
                         </div>
                         <a target="_blank" href=https://www.youtube.com/watch?v=2G79hUDMooI&list=PLglOs-zK7DJA6mncG76D893EuKzbTdabh">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
