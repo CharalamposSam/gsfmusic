@@ -94,12 +94,7 @@ buyButton.addEventListener('click', () => {
     div.style.fontSize = '18px'
 
     div.innerHTML = `<div>
-                      Για να αποκτήσετε το CD επικοινωνήστε μαζί μας με τους ακόλουθους τρόπους:
-                      <br>
-                      <br>
-                      1) Email: <b>info@gsfmusic.gr</b>
-                      <br>
-                      2) Τηλέφωνο: <b>210 7242221</b>
+                      Για να αποκτήσετε το CD επικοινωνήστε μαζί μας στο <b>info@gsfmusic.gr</b>
                      </div>`
 
     buyButton.parentElement.parentElement.querySelector('.cover').append(div)
