@@ -62,14 +62,14 @@ if ( isset( $_GET[ 's' ] ) ) {
                 <meta property="og:url" content="https://gsfmusic.gr/<?php echo $s; ?>">
                 <meta property="og:title" content="GSF Music - Δισκογραφική Εταιρεία">
                 <meta property="og:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
-                <meta property="og:image" content="https://gsfmusic.gr/images/artists/<?php echo $s; ?>.jpg">
+                <meta property="og:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
                 <!-- Twitter -->
                 <meta property="twitter:card" content="summary_large_image">
                 <meta property="twitter:url" content="https://gsfmusic.gr/<?php echo $s; ?>">
                 <meta property="twitter:title" content="GSF Music - Δισκογραφική Εταιρεία">
                 <meta property="twitter:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
-                <meta property="twitter:image" content="https://gsfmusic.gr/images/artists/<?php echo $s; ?>.jpg">
+                <meta property="twitter:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
                 <link rel="icon" type="image/png" href="images/favicon.png" />
                 <link rel="preconnect" href="https://fonts.gstatic.com">
