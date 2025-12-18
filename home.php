@@ -13,21 +13,21 @@
     <!-- Primary Meta Tags -->
     <title>GSF Music | Αρχική</title>
     <meta name="title" content="GSF Music - Δισκογραφική Εταιρεία">
-    <meta name="description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+    <meta name="description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gsfmusic.gr/">
     <meta property="og:title" content="GSF Music - Δισκογραφική Εταιρεία">
-    <meta property="og:description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
-    <meta property="og:image" content="https://gsfmusic.gr/images/share/<?php echo $s; ?>.jpg">
+    <meta property="og:description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
+    <meta property="og:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gsfmusic.gr">
     <meta property="twitter:title" content="GSF Music - Δισκογραφική Εταιρεία">
-    <meta property="twitter:description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
-    <meta property="twitter:image" content="https://gsfmusic.gr/images/share/<?php echo $s; ?>.jpg">
+    <meta property="twitter:description" content="Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
+    <meta property="twitter:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW2WQCM7C0"></script>

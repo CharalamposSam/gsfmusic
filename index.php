@@ -3,8 +3,11 @@ if ( isset( $_GET[ 's' ] ) ) {
     require_once('conn.php');
     $s = strtolower($_GET[ 's' ]);
     $artistExists = false;
-    $sql = "SELECT * from artists where artist_codename = '$s'";              
-    $result = mysqli_query( $conn, $sql );
+    $sql = "SELECT * from artists where artist_codename = ?";              
+     $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $s);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
         
     if ( mysqli_num_rows( $result ) > 0 ) { 
         $artistExists = true;
@@ -55,20 +58,20 @@ if ( isset( $_GET[ 's' ] ) ) {
                 <!-- Primary Meta Tags -->
                 <title>GSF Music | <?php echo $row[ 'artist_name' ]; ?></title>
                 <meta name="title" content="GSF Music - Δισκογραφική Εταιρεία">
-                <meta name="description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+                <meta name="description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
 
                 <!-- Open Graph / Facebook -->
                 <meta property="og:type" content="website">
                 <meta property="og:url" content="https://gsfmusic.gr/<?php echo $s; ?>">
                 <meta property="og:title" content="GSF Music - Δισκογραφική Εταιρεία">
-                <meta property="og:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+                <meta property="og:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
                 <meta property="og:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
                 <!-- Twitter -->
                 <meta property="twitter:card" content="summary_large_image">
                 <meta property="twitter:url" content="https://gsfmusic.gr/<?php echo $s; ?>">
                 <meta property="twitter:title" content="GSF Music - Δισκογραφική Εταιρεία">
-                <meta property="twitter:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+                <meta property="twitter:description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal, TikTok κ.α.">
                 <meta property="twitter:image" content="https://gsfmusic.gr/images/metadata/<?php echo $s; ?>.jpg">
 
                 <link rel="icon" type="image/png" href="images/favicon.png" />
