@@ -67,8 +67,8 @@
         <!-- Hero -->
         <div class="hero">
             <div class="heroImg">
-                <a target="_blank" href="https://www.youtube.com/watch?v=sGqn4BKGTX0" alt="Τάκης Ανθής - Θα σου στείλω λουλούδια">
-                    <img src="images/featured/hero5.jpg" alt="hero">
+                <a target="_blank" href="https://www.youtube.com/watch?v=s1WhSZg0dTA&list=PLglOs-zK7DJA1_IPGHL05enTyroPstVAQ" alt="Νατάσσα Μαρίνη">
+                    <img src="images/featured/her.jpg" alt="hero">
                 </a>
             </div>
         </div>
@@ -76,6 +76,14 @@
         <div class="sliderCont">
             <div class="slider">
                 <div class="featured">
+
+
+                <div>
+                        <div>
+                            <img src="images/featured/anthis.jpg" alt="Τάκης Ανθής - Θα σου στείλω λουλούδια">
+                        </div>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=sGqn4BKGTX0">Περισσότερα <img src="icons/open.png" alt="open"></a>
+                    </div>
 
                     <div>
                         <div >
@@ -91,20 +99,6 @@
                         <a target="_blank" href=https://www.youtube.com/watch?v=2G79hUDMooI&list=PLglOs-zK7DJA6mncG76D893EuKzbTdabh">Περισσότερα <img src="icons/open.png" alt="open"></a>
                     </div>
 
-                    <div>
-                        <div>
-                            <img src="images/featured/feature222.jpg" alt="Χορεύοντας Χιώτικα - Χοροί και τραγούδια από την Χίο">
-                        </div>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=Kf6KC1wjux8&list=PLglOs-zK7DJDn-ZjRIEwj1Jnh5H78FvYg">Περισσότερα <img src="icons/open.png" alt="open"></a>
-                    </div>
-
-
-                    
-                    
-                    
-                
-                    
-                    
                     
                 </div>
             </div>
