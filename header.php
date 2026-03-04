@@ -39,12 +39,12 @@ if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false || strpos($_SERVER['REQ
     
 </header>
 
-<link rel="stylesheet" href="<?php echo $basePath; ?>css/cart.css" />
+<!-- <link rel="stylesheet" href="<?php echo $basePath; ?>css/cart.css" />
 
 <div class="cart">
     <a href="">
     <span class="quantity">0</span>&nbsp;<span class="item">προϊόν</span>&nbsp;στο καλάθι&nbsp;&nbsp;&nbsp;&nbsp;<span class="ckeckout">Ταμείο &#8594;</span>
     </a>
-</div>
+</div> -->
 
 <script src="../js/cart.js" defer></script>
