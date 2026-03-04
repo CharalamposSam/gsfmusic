@@ -94,6 +94,9 @@
 
           <?php if ($row[ 'cd' ] == 1) ?>
             <div class="buttons">
+            <?php if ($row[ 'cd' ] != null) { ?>
+            <a target="_blank" href="<?php echo $row[ 'cd' ]; ?>"><button class="cdBtn" title="cd"><img src="../icons/cd.png" alt="cd"></button></a>
+            <?php } ?>
             <?php if ($row[ 'spotify' ] != null) { ?>
             <a target="_blank" href="<?php echo $row[ 'spotify' ]; ?>"><button class="spotifyBtn" title="Spotify"><img src="../icons/spotify.png" alt="spotify"></button></a>
             <?php } ?>

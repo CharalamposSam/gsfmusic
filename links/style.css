@@ -109,11 +109,7 @@ body main .albums .album .tracksDuration {
   text-align: center;
   margin: 40px 0;
 }
-body main .albums .album .prize {
-  text-align: center;
-  margin: 30px 0 20px;
-}
-body main .albums .album .prize button {
+body main .albums .album button {
   width: 180px;
   height: 40px;
   border-radius: 7px;
@@ -125,26 +121,10 @@ body main .albums .album .prize button {
   background-color: rgba(42, 42, 42, 0.9);
   color: white;
 }
-body main .albums .album .prize button span {
+body main .albums .album button span {
   font-size: 13px;
   margin-left: 10px;
   font-weight: 900;
-}
-body main .albums .album .prize .buttonDisabled {
-  background-color: rgba(42, 42, 42, 0.5);
-  color: #ccc;
-  pointer-events: none;
-}
-body main .albums .album .prize button:hover {
-  background-color: rgba(23, 23, 23, 0.9);
-}
-body main .albums .album .prize .unavailable {
-  background: #ccc;
-  color: #ababab;
-  cursor: not-allowed;
-}
-body main .albums .album .prize .unavailable:hover {
-  background: #ccc;
 }
 body main .albums .players {
   display: flex;
