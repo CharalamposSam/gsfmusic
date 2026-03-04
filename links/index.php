@@ -93,27 +93,7 @@
           <div class="tracksDuration" <?php if ($row[ 'num_of_tracks' ] == null) echo 'style="display: none;"' ?>><?php echo $row[ 'num_of_tracks' ]; ?> tracks / <?php echo $row[ 'duration' ]; ?> min</div>
 
           <?php if ($row[ 'cd' ] == 1) ?>
-            <div class="prize">
-              <button <?php if ($row[ 'availability' ] == 0) echo 'class="unavailable"' ?> data-album="<?php echo $a; ?>">
-                <?php echo ($row['availability'] == 0) ? "Εξαντλήθηκε" : "Αγορά CD &nbsp;<span>" . $row['prize'] . ".00€</span>"; ?>
-              </button>
-            </div>
-          <?php ?>
-        </div>
-        <div class="players">
-          <div class="player">
-            <!-- <div class="triangle"></div> -->
-            <!-- <iframe
-              width="300px"
-              height="168px"
-              src="https://www.youtube.com/embed/<?php echo $row[ 'embeddedLink' ]; ?>"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe> -->
-          </div>
-          <div class="buttons">
+            <div class="buttons">
             <?php if ($row[ 'spotify' ] != null) { ?>
             <a target="_blank" href="<?php echo $row[ 'spotify' ]; ?>"><button class="spotifyBtn" title="Spotify"><img src="../icons/spotify.png" alt="spotify"></button></a>
             <?php } ?>
@@ -133,6 +113,22 @@
             <a target="_blank" href="<?php echo $row[ 'tidal' ]; ?>"><button class="tidalBtn" title="Tidal"><img src="../icons/tidal.png" alt="tidal"></button></a>
             <?php } ?>
           </div> 
+          <?php ?>
+        </div>
+        <div class="players">
+          <div class="player">
+            <!-- <div class="triangle"></div> -->
+            <!-- <iframe
+              width="300px"
+              height="168px"
+              src="https://www.youtube.com/embed/<?php echo $row[ 'embeddedLink' ]; ?>"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe> -->
+          </div>
+          
 
           <!-- <div class="otherPlatforms">
             <div class="platform"><span>&#10003;</span>TikTok</div>
