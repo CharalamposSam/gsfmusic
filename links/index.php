@@ -95,7 +95,7 @@
           <?php if ($row[ 'cd' ] == 1) ?>
             <div class="buttons">
             <?php if ($row[ 'cd' ] != null) { ?>
-            <a target="_blank" href="<?php echo $row[ 'cd' ]; ?>"><button class="cdBtn" title="cd"><img src="../icons/eshop.png" alt="cd"></button></a>
+            <a target="_blank" href="<?php echo $row[ 'cd' ]; ?>"><button class="cdBtn" title="cd"><img src="../icons/e-shop.png" alt="cd"></button></a>
             <?php } ?>
             <?php if ($row[ 'spotify' ] != null) { ?>
             <a target="_blank" href="<?php echo $row[ 'spotify' ]; ?>"><button class="spotifyBtn" title="Spotify"><img src="../icons/spotify.png" alt="spotify"></button></a>
@@ -118,10 +118,10 @@
           </div> 
           <?php ?>
         </div>
-        <div class="players">
+        <!-- <div class="players">
           <div class="player">
-            <!-- <div class="triangle"></div> -->
-            <!-- <iframe
+            <div class="triangle"></div>
+            <iframe
               width="300px"
               height="168px"
               src="https://www.youtube.com/embed/<?php echo $row[ 'embeddedLink' ]; ?>"
@@ -129,18 +129,18 @@
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe> -->
+            ></iframe> 
           </div>
           
 
-          <!-- <div class="otherPlatforms">
+          <div class="otherPlatforms">
             <div class="platform"><span>&#10003;</span>TikTok</div>
             <div class="platform"><span>&#10003;</span>Instagram</div>
             <div class="platform"><span>&#10003;</span>Facebook</div>
             <div class="platform"><span>&#10003;</span>iTunes</div>
-          </div> -->
-          <!-- <a href="" class="artistProfile"><button>Artist Profile</button></a href=""> -->
-        <!--</div> -->
+          </div>
+          <a href="" class="artistProfile"><button>Artist Profile</button></a href="">
+        </div> -->
       </div> 
       <!-- <div class="description"><?php echo $row[ 'description' ]; ?></div> -->
         </main>
