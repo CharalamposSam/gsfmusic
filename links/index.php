@@ -7,7 +7,7 @@
     }
 
     $a = $_GET[ 'a' ];
-    $sql = "SELECT * FROM albums WHERE album_code = ?";
+    $sql = "SELECT * FROM main WHERE code = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $a);
     mysqli_stmt_execute($stmt);
@@ -22,10 +22,7 @@
 
       
 
-    $sql = "SELECT albums.title, albums.cd, albums.prize, albums.availability, albums.description, albums.embeddedLink, main.*
-    FROM albums
-    LEFT JOIN main ON albums.album_code = main.code
-    WHERE albums.album_code = '$a';";              
+    $sql = "SELECT  main.* FROM main WHERE main.code = '$a';";              
     $result = mysqli_query( $conn, $sql );
 
     if ( mysqli_num_rows( $result ) == 1 ) {
@@ -39,22 +36,22 @@
         
 
         <!-- Primary Meta Tags -->
-        <title>GSF Music | <?php echo $row[ 'title' ]; ?></title>
+        <title>GSF Music | links</title>
         <meta name="title" content="GSF Music - Δισκογραφική Εταιρεία">
         <meta name="description" content="Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="Music Album">
         <meta property="og:url" content="https://gsfmusic.gr/album/<?php echo $a; ?>">
-        <meta property="og:title" content="<?php echo $row[ 'title' ]; ?>">
-        <meta property="og:description" content="<?php echo $row[ 'title' ]; ?>. Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+        <meta property="og:title" content="links">
+        <meta property="og:description" content="links. Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
         <!-- <meta property="og:image" content="https://gsfmusic.gr/images/share/<?php echo $a; ?>.jpg"> -->
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://gsfmusic.gr/album/<?php echo $a; ?>">
-        <meta property="twitter:title" content="<?php echo $row[ 'title' ]; ?>">
-        <meta property="twitter:description" content="<?php echo $row[ 'title' ]; ?>. Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
+        <meta property="twitter:title" content="links">
+        <meta property="twitter:description" content="links. Ακούστε σε Spotify, Youtube Music, Apple Music, Amazon Music, Deezer, Tidal TikTok κ.α.">
         <!-- <meta property="twitter:image" content="https://gsfmusic.gr/images/share/<?php echo $s; ?>.jpg"> -->
 
         <link rel="icon" type="image/png" href="../images/favicon.png" />
@@ -83,7 +80,7 @@
 
             <div class="albums">
         <div class="album">
-          <div class="title"><?php echo $row[ 'title' ]; ?></div>
+          <!-- <div class="title"></div> -->
           <div class="cover">
             <img src="../images/covers/<?php echo $a; ?>.jpg" alt="" />
           </div>
