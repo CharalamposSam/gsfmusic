@@ -47,4 +47,4 @@ if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false || strpos($_SERVER['REQ
     </a>
 </div> -->
 
-<script src="../js/cart.js" defer></script>
+<!-- <script src="../js/cart.js" defer></script> -->
