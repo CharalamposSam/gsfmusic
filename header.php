@@ -1,5 +1,5 @@
 <?php 
-if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false || strpos($_SERVER['REQUEST_URI'], '/eshop/') !== false) {
+if (strpos($_SERVER['REQUEST_URI'], '/album/') !== false || strpos($_SERVER['REQUEST_URI'], '/eshop/') !== false || strpos($_SERVER['REQUEST_URI'], '/links/') !== false) {
     $basePath = "../";
 } else {
     $basePath = '';
