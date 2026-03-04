@@ -109,7 +109,80 @@ body main .albums .album .tracksDuration {
   text-align: center;
   margin: 40px 0;
 }
-body main .albums .album button {
+body main .albums .album .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+body main .albums .album .buttons a {
+  cursor: auto;
+  color: white;
+  text-decoration: none;
+}
+body main .albums .album .buttons a button {
+  margin: 5px;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+body main .albums .album .buttons a button img {
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+body main .albums .album .buttons a button:hover {
+  transform: scale(1.05);
+}
+body main .albums .album .buttons a .cdBtn {
+  padding: 5px;
+  background-color: white;
+}
+body main .albums .album .buttons a .spotifyBtn,
+body main .albums .album .buttons a .youtubeBtn {
+  background-color: #000000;
+  padding: 5px;
+}
+body main .albums .album .buttons a .appleBtn {
+  background: rgb(254, 36, 85);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(254, 36, 85)), color-stop(100%, rgb(231, 56, 39)));
+  background: linear-gradient(to bottom, rgb(254, 36, 85) 0%, rgb(231, 56, 39) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe2455', endColorstr='#e73827', GradientType=0 );
+}
+body main .albums .album .buttons a .amazonBtn {
+  background: rgb(68, 0, 255);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(68, 0, 255)), color-stop(100%, rgb(44, 33, 110)));
+  background: linear-gradient(to bottom, rgb(68, 0, 255) 0%, rgb(44, 33, 110) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4400ff', endColorstr='#2c216e', GradientType=0 );
+}
+body main .albums .album .buttons a .deezerBtn {
+  background-color: #000000;
+}
+body main .albums .album .buttons a .tidalBtn {
+  background-color: #000000;
+}
+body main .albums .album .buttons a .tiktokBtn {
+  background-color: #000000;
+}
+body main .albums .album .buttons a .soundcloudBtn {
+  background: rgb(255, 42, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(255, 42, 0)), color-stop(100%, rgb(231, 56, 39)));
+  background: linear-gradient(to bottom, rgb(255, 42, 0) 0%, rgb(231, 56, 39) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#e73827', GradientType=0 );
+}
+body main .albums .album .prize {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+body main .albums .album .prize button {
   width: 180px;
   height: 40px;
   border-radius: 7px;
@@ -121,10 +194,26 @@ body main .albums .album button {
   background-color: rgba(42, 42, 42, 0.9);
   color: white;
 }
-body main .albums .album button span {
+body main .albums .album .prize button span {
   font-size: 13px;
   margin-left: 10px;
   font-weight: 900;
+}
+body main .albums .album .prize .buttonDisabled {
+  background-color: rgba(42, 42, 42, 0.5);
+  color: #ccc;
+  pointer-events: none;
+}
+body main .albums .album .prize button:hover {
+  background-color: rgba(23, 23, 23, 0.9);
+}
+body main .albums .album .prize .unavailable {
+  background: #ccc;
+  color: #ababab;
+  cursor: not-allowed;
+}
+body main .albums .album .prize .unavailable:hover {
+  background: #ccc;
 }
 body main .albums .players {
   display: flex;
@@ -163,75 +252,6 @@ body main .albums .players .player iframe {
   z-index: 2;
   position: relative;
   border-radius: 7px;
-}
-body main .albums .players .buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-body main .albums .players .buttons a {
-  cursor: auto;
-  color: white;
-  text-decoration: none;
-}
-body main .albums .players .buttons a button {
-  margin: 5px;
-  width: 55px;
-  height: 55px;
-  display: grid;
-  place-items: center;
-  border-radius: 7px;
-  overflow: hidden;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
-}
-body main .albums .players .buttons a button img {
-  display: block;
-  width: 100%;
-  pointer-events: none;
-}
-body main .albums .players .buttons a button:hover {
-  transform: scale(1.05);
-}
-body main .albums .players .buttons a .cdBtn {
-  padding: 5px;
-  background-color: white;
-}
-body main .albums .players .buttons a .spotifyBtn,
-body main .albums .players .buttons a .youtubeBtn {
-  background-color: #000000;
-  padding: 5px;
-}
-body main .albums .players .buttons a .appleBtn {
-  background: rgb(254, 36, 85);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(254, 36, 85)), color-stop(100%, rgb(231, 56, 39)));
-  background: linear-gradient(to bottom, rgb(254, 36, 85) 0%, rgb(231, 56, 39) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe2455', endColorstr='#e73827', GradientType=0 );
-}
-body main .albums .players .buttons a .amazonBtn {
-  background: rgb(68, 0, 255);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(68, 0, 255)), color-stop(100%, rgb(44, 33, 110)));
-  background: linear-gradient(to bottom, rgb(68, 0, 255) 0%, rgb(44, 33, 110) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4400ff', endColorstr='#2c216e', GradientType=0 );
-}
-body main .albums .players .buttons a .deezerBtn {
-  background-color: #000000;
-}
-body main .albums .players .buttons a .tidalBtn {
-  background-color: #000000;
-}
-body main .albums .players .buttons a .tiktokBtn {
-  background-color: #000000;
-}
-body main .albums .players .buttons a .soundcloudBtn {
-  background: rgb(255, 42, 0);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(255, 42, 0)), color-stop(100%, rgb(231, 56, 39)));
-  background: linear-gradient(to bottom, rgb(255, 42, 0) 0%, rgb(231, 56, 39) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#e73827', GradientType=0 );
 }
 body main .albums .players .otherPlatforms {
   display: grid;
