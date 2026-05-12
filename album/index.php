@@ -73,6 +73,7 @@
         gtag('config', 'G-KW2WQCM7C0');
         </script>
         <script src="../js/common.js" defer></script>
+        <script src="../js/cart.js" defer></script>
     </head>
 
     <body>
